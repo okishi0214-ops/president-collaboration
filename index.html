@@ -1,0 +1,1015 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>那須学長と語る HALLOWEEN PARTY｜2026.10.28</title>
+<meta name="description" content="サークル・団体の代表と那須学長が、学生生活や活動の課題、そしてその解決策について語り合うハロウィンイベント。2026年10月28日（水）18:30–21:00／KIBINOVE 1階／参加無料・申込不要。">
+<!-- SNS共有（OGP）：公開URLと画像が決まったら og:url / og:image を設定 -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="那須学長と語る HALLOWEEN PARTY">
+<meta property="og:description" content="学生の悩みを、解決策とセットで学長へ。2026.10.28 WED 18:30–21:00｜KIBINOVE 1階｜参加無料・申込不要">
+<!-- <meta property="og:url" content="公開URL"> -->
+<!-- <meta property="og:image" content="OGP画像URL（1200×630推奨）"> -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#2b2453">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cinzel:wght@700;900&family=Fredoka:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #2b2453;
+    --navy-2: #3b3270;
+    --cream: #fbf6ee;
+    --cream-2: #f5ede1;
+    --ink: #3b3159;
+    --muted: #6d6585;
+    --orange: #f5893a;
+    --orange-d: #d9661a;
+    --peach: #fde4d9;
+    --lav: #eee7f7;
+    --line: #ebe1d3;
+    --script: #6b5aa3;
+    --wrap: 1180px;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  body {
+    margin: 0;
+    /* 英字新聞をうっすら（上に重ねたクリーム色で透け具合を調整） */
+    background:
+      linear-gradient(rgba(251, 246, 238, .93), rgba(251, 246, 238, .93)),
+      url("images/newspaper.webp") 0 0 / 720px auto repeat,
+      var(--cream);
+    color: var(--ink);
+    font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.9;
+    letter-spacing: .04em;
+    /* 文節ごとに改行（区切りはスクリプトで挿入） */
+    word-break: keep-all;
+    overflow-wrap: anywhere;
+    line-break: strict;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  img, svg { max-width: 100%; display: block; }
+  a { color: var(--orange-d); }
+  .wrap { position: relative; max-width: var(--wrap); margin: 0 auto; padding: 0 20px; }
+  @media (min-width: 960px) { .wrap { padding: 0 48px; } }
+  .ph { display: inline-block; white-space: nowrap; }
+  .fred { font-family: "Fredoka", sans-serif; letter-spacing: .02em; }
+  .script { font-family: "Caveat", cursive; font-weight: 700; color: var(--script); font-size: 26px; line-height: 1; display: inline-block; transform: rotate(-8deg); letter-spacing: .02em; }
+  .sp { display: none; }
+  @media (max-width: 599px) { .sp { display: inline; } }
+
+  /* ---------- Header ---------- */
+  .header {
+    position: fixed; inset: 0 0 auto 0; z-index: 50;
+    background: rgba(43, 36, 83, .9);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  }
+  .header .wrap { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+  @media (min-width: 960px) { .header .wrap { height: 78px; } }
+  .logo { display: inline-flex; align-items: center; gap: 10px; color: #fff; text-decoration: none; }
+  .logo-text { display: inline-flex; flex-direction: column; align-items: center; }
+  .logo b { font-weight: 700; font-size: 20px; letter-spacing: .2em; line-height: 1.3; }
+  .logo svg { width: 120px; height: 10px; margin-top: 2px; }
+  @media (min-width: 960px) { .logo b { font-size: 24px; } .logo svg { width: 150px; } }
+  /* ロゴ左の学長（シール風の白フチ） */
+  .logo-fig {
+    height: 52px; width: auto; margin: -6px 0 -8px;
+    filter: drop-shadow(1.5px 0 0 #fff) drop-shadow(-1.5px 0 0 #fff) drop-shadow(0 1.5px 0 #fff) drop-shadow(0 -1.5px 0 #fff) drop-shadow(0 3px 6px rgba(0, 0, 0, .35));
+    transform-origin: 50% 90%;
+  }
+  .logo:hover .logo-fig { animation: wiggle .6s ease; }
+  @keyframes wiggle { 25% { transform: rotate(-8deg); } 75% { transform: rotate(6deg); } }
+  @media (min-width: 960px) { .logo-fig { height: 62px; } }
+  .nav { display: flex; gap: 32px; align-items: center; }
+  .nav a.link { display: none; color: #fff; text-decoration: none; font-size: 14px; font-weight: 700; letter-spacing: .08em; }
+  .nav a.link:hover { color: var(--orange); }
+  @media (min-width: 960px) { .nav a.link { display: inline; } }
+
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .8em;
+    min-height: 60px; padding: 0 30px;
+    background: var(--orange); color: var(--navy);
+    font-family: inherit; font-weight: 900; font-size: 17px; letter-spacing: .1em; text-decoration: none;
+    border-radius: 999px;
+    box-shadow: 0 5px 0 var(--orange-d), 0 10px 24px rgba(245, 137, 58, .35);
+    transition: transform .12s, box-shadow .12s;
+  }
+  .btn:hover { transform: translateY(2px); box-shadow: 0 3px 0 var(--orange-d), 0 8px 18px rgba(245, 137, 58, .35); }
+  .btn:active { transform: translateY(5px); box-shadow: 0 0 0 var(--orange-d); }
+  .btn .pk { width: 24px; height: 24px; }
+  .btn .arr { width: 16px; height: 12px; transition: transform .15s; }
+  .btn:hover .arr { transform: translateX(3px); }
+  .btn-sm { min-height: 42px; padding: 0 18px; font-size: 13px; gap: .6em; box-shadow: 0 3px 0 var(--orange-d); }
+  .btn-sm:hover { box-shadow: 0 1px 0 var(--orange-d); }
+  .btn-sm .pk { width: 18px; height: 18px; }
+  @media (max-width: 380px) { .header .btn-sm .pk { display: none; } }
+  @media (max-width: 599px) { .hide-sm { display: none; } .header .btn-sm { white-space: nowrap; } }
+  .btn:focus-visible, a:focus-visible, summary:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
+
+  /* ---------- お菓子の飾り ---------- */
+  .deco {
+    position: absolute; pointer-events: none; z-index: 4; height: auto; max-width: none;
+    width: min(var(--w), var(--mw, 30vw));
+    filter: drop-shadow(0 6px 10px rgba(43, 36, 83, .18));
+    transform: rotate(var(--r, 0deg));
+  }
+  /* セクションの境目にまたがるお菓子 */
+  .deco.edge { top: 0; translate: -50% -55%; }
+  .deco:not(.edge) { translate: -50% 0; }
+  .bob { animation: bob var(--t, 5s) ease-in-out infinite alternate; }
+  @keyframes bob { from { transform: translateY(-6px) rotate(var(--r, 0deg)); } to { transform: translateY(6px) rotate(calc(var(--r, 0deg) + 5deg)); } }
+  @media (max-width: 759px) { .deco.pc { display: none; } }
+  /* 交互の背景と波線の境目 */
+  .tone {
+    background:
+      linear-gradient(rgba(255, 250, 243, .93), rgba(255, 250, 243, .93)),
+      url("images/newspaper.webp") 240px 130px / 720px auto repeat,
+      #fffaf3;
+  }
+  .tone-wave { position: absolute; left: 0; top: -34px; width: 100%; height: 35px; pointer-events: none; }
+
+  /* ---------- Hero ---------- */
+  .hero {
+    position: relative; z-index: 3; color: #fff;
+    padding-top: 68px;
+    background:
+      radial-gradient(ellipse 60% 50% at 78% 45%, rgba(120, 90, 200, .35), transparent 70%),
+      radial-gradient(circle at 10% 10%, rgba(255, 255, 255, .06), transparent 30%),
+      var(--navy);
+  }
+  @media (min-width: 960px) { .hero { padding-top: 78px; } }
+  .confetti { position: absolute; inset: 0; z-index: 1; pointer-events: none; overflow: hidden; }
+  .confetti i {
+    position: absolute; top: -30px; display: block; border-radius: 3px;
+    animation: fall var(--t) linear var(--d) infinite;
+  }
+  @keyframes fall { from { transform: translateY(0) rotate(0deg); } to { transform: translateY(var(--h, 900px)) rotate(var(--spin, 540deg)); } }
+  .hero-grid { position: relative; display: grid; grid-template-columns: 1fr; }
+  .hero-text { position: relative; z-index: 8; }
+  @media (min-width: 960px) { .hero-grid { grid-template-columns: 1.02fr 1fr; align-items: center; min-height: 640px; } }
+  .hero-text { padding: 28px 0 8px; }
+  @media (min-width: 960px) { .hero-text { padding: 40px 0 120px; } }
+  .hero h1 { margin: 0; font-weight: 700; }
+  .hero h1 .ja { display: inline-block; font-size: clamp(24px, 6vw, 40px); letter-spacing: .14em; transform: rotate(-5deg); transform-origin: left center; }
+  /* 光る金のタイトル：金属グラデーション＋ラメ＋光の筋、重ねた影で厚みと発光 */
+  .hero h1 { position: relative; }
+  .hero h1 .en-wrap { position: relative; display: block; margin: 18px 0 0; }
+  /* タイトルロゴ（スライムの画像） */
+  .title-logo { display: block; width: min(100%, 580px); height: auto; margin-left: -2%; filter: drop-shadow(0 0 16px rgba(150, 255, 70, .32)) drop-shadow(0 12px 18px rgba(5, 2, 25, .5)); }
+  .hero h1 .en {
+    position: relative; z-index: 1;
+    display: inline-flex; flex-direction: column; align-items: center;
+    font-family: "Cinzel", serif; font-weight: 900;
+    font-size: clamp(42px, 11.6vw, 80px); line-height: 1.02; letter-spacing: .01em; white-space: nowrap;
+    filter:
+      drop-shadow(0 1px 0 #a24c12) drop-shadow(0 1px 0 #8c400f) drop-shadow(0 1.5px 0 #6c300b) drop-shadow(0 2px 0 #431d07)
+      drop-shadow(0 0 8px rgba(255, 190, 80, .6)) drop-shadow(0 0 26px rgba(255, 140, 40, .4))
+      drop-shadow(0 14px 16px rgba(5, 2, 25, .6));
+  }
+  .hero h1 .en .ln {
+    position: relative; z-index: 1;
+    display: flex; align-items: flex-end; width: max-content;
+    background:
+      linear-gradient(110deg, transparent 42%, rgba(255, 255, 255, .9) 50%, transparent 58%),
+      radial-gradient(circle, rgba(255, 252, 230, .55) 0 .5px, transparent 1.1px),
+      radial-gradient(circle, rgba(255, 240, 190, .4) 0 .5px, transparent 1px),
+      linear-gradient(180deg, #fff6cc 0%, #ffd873 18%, #f8aa40 42%, #c9671b 55%, #f29b36 70%, #ffd77f 87%, #dc8429 100%);
+    background-size: 300% 100%, 13px 11px, 7px 17px, 100% 100%;
+    background-repeat: no-repeat, repeat, repeat, no-repeat;
+    background-position: 160% 0, 0 0, 3px 5px, 0 0;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    -webkit-text-stroke: .6px rgba(255, 236, 190, .6);
+    animation: shine 5s ease-in-out 2.6s infinite;
+  }
+  @keyframes shine {
+    0%, 35% { background-position: 160% 0, 0 0, 3px 5px, 0 0; }
+    75%, 100% { background-position: -60% 0, 0 0, 3px 5px, 0 0; }
+  }
+  /* O は灯りのともったジャック・オー・ランタン */
+  .hero h1 .en .o-pk { flex: none; width: .86em; height: .9em; margin: 0 .02em .02em; overflow: visible; }
+  .hero h1 .en .o-pk .lit { animation: flicker 2.4s ease-in-out infinite; }
+  @keyframes flicker { 0%, 100% { opacity: 1; } 40% { opacity: .82; } 55% { opacity: .95; } 70% { opacity: .78; } }
+  /* タイトル周りのきらめき */
+  .swoosh { position: absolute; z-index: 0; left: -6%; width: 112%; top: 40%; height: 70%; pointer-events: none; overflow: visible; filter: drop-shadow(0 0 6px rgba(255, 190, 80, .8)); }
+  .sparks { position: absolute; inset: -10px -20px; z-index: 2; pointer-events: none; }
+  .sparks svg { position: absolute; width: var(--s); height: var(--s); translate: -50% -50%; filter: drop-shadow(0 0 4px rgba(255, 220, 130, .9)); animation: twinkle var(--t) ease-in-out var(--d) infinite; opacity: 0; }
+  .sparks i { position: absolute; width: var(--s); height: var(--s); border-radius: 50%; background: #ffe39a; box-shadow: 0 0 6px 1px rgba(255, 200, 90, .9); animation: twinkle var(--t) ease-in-out var(--d) infinite; opacity: 0; }
+  @keyframes twinkle { 0%, 100% { opacity: 0; transform: scale(.3) rotate(0deg); } 50% { opacity: 1; transform: scale(1) rotate(45deg); } }
+  .hero .catch { margin: 30px 0 10px; font-size: clamp(19px, 4.8vw, 25px); font-weight: 900; letter-spacing: .08em; line-height: 1.6; }
+  .hero .lead { margin: 0 0 22px; color: #d8d2ee; font-size: 15px; line-height: 1.8; }
+  .info-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 0; margin: 0 0 30px; padding: 0; list-style: none; }
+  .info-row li { display: flex; align-items: center; gap: 10px; padding-right: 20px; margin-right: 20px; border-right: 1px solid rgba(255, 255, 255, .3); font-size: 15.5px; line-height: 1.35; font-weight: 700; }
+  .info-row li:last-child { border-right: 0; margin-right: 0; padding-right: 0; }
+  .info-row svg { width: 28px; height: 28px; flex: none; }
+  .info-row .num { font-family: "Fredoka", sans-serif; font-size: 1.35em; font-weight: 600; }
+  @media (max-width: 599px) { .info-row li { flex-basis: 100%; border-right: 0; margin-right: 0; padding-right: 0; } }
+
+  .hero-art { position: relative; height: 330px; margin: 0 -20px; }
+  @media (min-width: 600px) { .hero-art { height: 440px; } }
+  @media (min-width: 960px) { .hero-art { height: 620px; margin: 0 -48px 0 0; } }
+  /* お菓子の山：下端を波線の境目に重ねる */
+  .hero-art .pile {
+    position: absolute; z-index: 6; right: 0; bottom: -54px; width: 100%; max-width: 732px; height: auto;
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, .25));
+  }
+  @media (min-width: 960px) { .hero-art .pile { width: 112%; max-width: none; right: -44px; bottom: -84px; } }
+  main { overflow-x: clip; }
+  .hero-art .gakucho {
+    position: absolute; z-index: 7; left: 50%; bottom: 0; height: 62%; width: auto; max-width: none;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 14px 24px rgba(0, 0, 0, .35));
+  }
+  @media (min-width: 960px) { .hero-art .gakucho { left: 16%; height: 50%; bottom: 40px; } }
+  .hero-art .gakucho.float { animation: float 4s ease-in-out infinite alternate; }
+  @keyframes float { from { transform: translateX(-50%) translateY(0); } to { transform: translateX(-50%) translateY(-10px); } }
+  .hero-art .sign { position: absolute; right: 6%; top: 12%; z-index: 4; color: #fff; font-size: clamp(26px, 6vw, 40px); transform: rotate(10deg); text-align: center; line-height: .9; text-shadow: 0 3px 0 rgba(0, 0, 0, .25); }
+  .hero-wave { position: absolute; left: 0; right: 0; bottom: -1px; z-index: 5; width: 100%; height: 70px; }
+  @media (min-width: 960px) { .hero-wave { height: 110px; } }
+
+  /* ---------- Sections ---------- */
+  section { position: relative; padding: 72px 0; }
+  @media (min-width: 960px) { section { padding: 88px 0; } }
+  .head { position: relative; z-index: 2; margin: 0 0 32px; }
+  .head .script { display: block; width: max-content; margin: 0 0 -2px -4px; font-size: 24px; }
+  .head h2 { margin: 0; font-size: clamp(22px, 5.4vw, 30px); font-weight: 700; letter-spacing: .1em; line-height: 1.5; }
+  .head h2 .big { font-family: "Fredoka", sans-serif; font-size: 1.7em; line-height: 1; color: var(--navy); vertical-align: -.08em; margin: 0 .04em; }
+  .head .note { display: inline-block; margin-left: 12px; font-size: 12px; color: var(--muted); letter-spacing: .04em; }
+  .panel { position: relative; z-index: 2; background: #fff; border-radius: 20px; box-shadow: 0 10px 30px rgba(43, 36, 83, .08); }
+
+  /* About */
+  .about-grid { position: relative; z-index: 2; display: grid; gap: 26px; grid-template-columns: 1fr; }
+  @media (min-width: 960px) { .about-grid { grid-template-columns: 200px 1px 1fr 330px; gap: 36px; align-items: center; } }
+  @media (min-width: 960px) { .about-main h3 { font-size: 27px; } }
+  .about-label h2 { margin: 0; font-size: 24px; font-weight: 700; letter-spacing: .14em; line-height: 1.6; }
+  .about-label h2 svg { display: inline-block; width: 32px; height: 32px; vertical-align: -.25em; margin-left: 6px; }
+  .vline { display: none; background: var(--line); align-self: stretch; }
+  @media (min-width: 960px) { .vline { display: block; } }
+  .about-main h3 { margin: 0 0 16px; font-size: clamp(22px, 5.4vw, 32px); font-weight: 700; line-height: 1.65; letter-spacing: .08em; }
+  .about-main h3 .u { background: linear-gradient(transparent 72%, rgba(245, 137, 58, .38) 72%); }
+  .about-main p { margin: 0; color: var(--muted); }
+  .polaroids { position: relative; height: 250px; max-width: 380px; width: 100%; margin: 0 auto; }
+  .pol { position: absolute; width: 52%; background: #fff; padding: 9px 9px 30px; box-shadow: 0 10px 24px rgba(43, 36, 83, .18); }
+  .pol img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+  .pol.p1 { left: 0; top: 24px; transform: rotate(-7deg); }
+  .pol.p2 { right: 0; top: 0; transform: rotate(6deg); }
+  .polaroids .script { position: absolute; right: -6px; bottom: -14px; font-size: 26px; text-align: center; transform: rotate(-10deg); }
+
+  /* Purpose */
+  .aims { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr; gap: 28px; }
+  @media (min-width: 900px) { .aims { grid-template-columns: repeat(3, 1fr); gap: 0; } }
+  .aim { display: grid; grid-template-columns: 84px 1fr; column-gap: 20px; align-items: start; }
+  @media (min-width: 900px) { .aim { padding: 6px 32px; border-left: 1px solid var(--line); } .aim:first-child { border-left: 0; padding-left: 0; } }
+  .aim .ic { width: 84px; height: 84px; border-radius: 50%; background: var(--peach); display: grid; place-items: center; grid-row: span 3; }
+  .aim .ic svg { width: 44px; height: 44px; }
+  .aim .num { font-family: "Fredoka", sans-serif; font-size: 28px; font-weight: 600; color: var(--orange); line-height: 1.1; }
+  .aim h3 { margin: 4px 0 10px; font-size: 18px; font-weight: 700; letter-spacing: .06em; line-height: 1.5; }
+  .aim p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.85; }
+
+  /* 2カラム */
+  .duo { position: relative; z-index: 2; display: grid; gap: 56px; grid-template-columns: 1fr; }
+  @media (min-width: 960px) { .duo { grid-template-columns: 1fr 1fr; gap: 48px; } }
+
+  /* Overview */
+  .ov { margin: 0; padding: 14px 24px; }
+  .ov > div { display: grid; grid-template-columns: 92px 1fr; gap: 16px; align-items: start; padding: 13px 0; border-bottom: 1px dashed var(--line); }
+  .ov > div:last-child { border-bottom: 0; }
+  .ov dt { background: var(--lav); color: var(--navy-2); border-radius: 999px; text-align: center; font-size: 13px; font-weight: 700; line-height: 1.9; letter-spacing: .1em; }
+  .ov dd { margin: 0; font-size: 15px; line-height: 1.75; }
+  .ov dd small { color: var(--muted); font-size: 12.5px; }
+
+  /* Program */
+  .tl { list-style: none; margin: 0; padding: 22px 24px; position: relative; }
+  .tl::before { content: ""; position: absolute; left: 63px; top: 40px; bottom: 40px; width: 2px; background: var(--lav); transform-origin: top; transform: scaleY(0); transition: transform 1.2s ease-out .2s; }
+  .tl.in::before { transform: none; }
+  .tl li { position: relative; display: grid; grid-template-columns: 80px 1fr; gap: 18px; padding: 10px 0; }
+  .tl .time { position: relative; z-index: 1; align-self: start; margin-top: 2px; background: var(--navy-2); color: #fff; border-radius: 999px; text-align: center; font-family: "Fredoka", sans-serif; font-weight: 600; font-size: 15px; line-height: 32px; height: 32px; }
+  .tl h3 { margin: 0; font-size: 16px; font-weight: 700; letter-spacing: .06em; }
+  .tl p { margin: 0; color: var(--muted); font-size: 13.5px; line-height: 1.75; }
+
+  /* Format */
+  .steps { display: grid; gap: 12px; grid-template-columns: 1fr; }
+  @media (min-width: 600px) { .steps { grid-template-columns: repeat(3, 1fr); } }
+  .step { background: #fff3ec; border-radius: 16px; padding: 18px 18px 20px; position: relative; z-index: 2; }
+  .step .top { display: flex; align-items: center; gap: 8px; }
+  .step .top svg { width: 30px; height: 30px; flex: none; }
+  .step .label { font-family: "Fredoka", sans-serif; color: var(--orange); font-size: 13px; font-weight: 600; letter-spacing: .08em; line-height: 1.2; }
+  .step h3 { margin: 0; font-size: 17px; font-weight: 700; line-height: 1.3; }
+  .step p { margin: 12px 0 0; color: var(--muted); font-size: 13.5px; line-height: 1.8; }
+  .pills { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 18px; position: relative; z-index: 2; }
+  .pill { display: inline-flex; align-items: center; gap: 10px; font-size: 14px; }
+  .pill b { background: var(--lav); color: var(--navy-2); border-radius: 999px; padding: 1px 14px; font-size: 13px; }
+
+  /* Halloween */
+  .hw-row { position: relative; z-index: 2; display: grid; gap: 22px; grid-template-columns: 1fr; }
+  @media (min-width: 600px) { .hw-row { grid-template-columns: repeat(3, 1fr); gap: 0; } }
+  .hw { text-align: left; }
+  @media (min-width: 600px) { .hw { padding: 0 18px; border-left: 1px solid var(--line); } .hw:first-child { border-left: 0; padding-left: 0; } }
+  .hw .ic { position: relative; width: 76px; height: 76px; border-radius: 50%; background: var(--lav); display: grid; place-items: center; margin-bottom: 12px; }
+  .hw .ic svg { width: 42px; height: 42px; }
+  .hw .ic img { position: absolute; left: 50%; bottom: 0; width: 96px; max-width: none; transform: translateX(-50%); }
+  .hw h3 { margin: 0 0 6px; font-size: 16px; font-weight: 700; line-height: 1.5; }
+  .hw p { margin: 0; color: var(--muted); font-size: 13.5px; line-height: 1.8; }
+
+  /* Reception */
+  .rc { display: grid; gap: 24px; grid-template-columns: 1fr; padding: 30px 26px; }
+  @media (min-width: 900px) { .rc { grid-template-columns: 1.1fr 1fr; gap: 40px; padding: 40px 44px; align-items: center; } }
+  .rc .big { margin: 0 0 12px; font-size: clamp(20px, 4.8vw, 26px); font-weight: 700; line-height: 1.65; letter-spacing: .06em; }
+  .rc p { margin: 0; color: var(--muted); }
+  .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .chip { background: var(--cream); border-radius: 14px; padding: 14px 16px; }
+  .chip.wide { grid-column: 1 / -1; }
+  .chip .k { font-family: "Fredoka", sans-serif; font-weight: 600; color: var(--orange); font-size: 12px; letter-spacing: .14em; }
+  .chip .v { display: block; font-weight: 700; line-height: 1.55; }
+  .chip .v small { display: block; color: var(--muted); font-weight: 500; font-size: 12.5px; }
+
+  /* Entry */
+  .entry { max-width: 820px; margin: 0 auto; padding: 44px 24px; text-align: center; }
+  .entry .big { margin: 0 0 10px; font-size: clamp(26px, 6.4vw, 40px); font-weight: 900; letter-spacing: .1em; line-height: 1.5; }
+  .entry .big em { font-style: normal; color: var(--orange); }
+  .entry > p { margin: 0 auto; color: var(--muted); max-width: 480px; }
+  .entry-list { list-style: none; padding: 0; margin: 26px auto 32px; max-width: 520px; text-align: left; }
+  .entry-list li { display: grid; grid-template-columns: 96px 1fr; gap: 14px; align-items: center; padding: 11px 0; border-bottom: 1px dashed var(--line); }
+  .entry-list li span:first-child { background: var(--lav); color: var(--navy-2); border-radius: 999px; text-align: center; font-size: 13px; font-weight: 700; }
+  .btn-line { background: #fff; color: var(--navy); border: 2px solid var(--navy); box-shadow: 0 4px 0 var(--navy); min-height: 52px; font-size: 15px; }
+  .btn-line:hover { box-shadow: 0 2px 0 var(--navy); }
+  .contact { margin-top: 18px; font-size: 13px; color: var(--muted); word-break: break-all; }
+
+  /* FAQ */
+  .faq { position: relative; z-index: 2; max-width: 860px; margin: 0 auto; }
+  .faq details { background: #fff; border-radius: 16px; box-shadow: 0 6px 20px rgba(43, 36, 83, .06); margin-bottom: 12px; }
+  .faq summary { cursor: pointer; list-style: none; padding: 18px 54px 18px 22px; font-weight: 700; position: relative; }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::before { content: "Q"; display: inline-grid; place-items: center; width: 28px; height: 28px; margin-right: 12px; border-radius: 50%; background: var(--orange); color: #fff; font-family: "Fredoka", sans-serif; font-size: 15px; vertical-align: 1px; }
+  .faq summary::after { content: "+"; position: absolute; right: 22px; top: 50%; transform: translateY(-50%); font-size: 24px; color: var(--orange); font-family: "Fredoka", sans-serif; }
+  .faq details[open] summary::after { content: "−"; }
+  .faq .a { padding: 0 22px 20px 62px; color: var(--muted); font-size: 15px; }
+
+  /* 最後の帯＋フッター */
+  .band { position: relative; color: #fff; background: var(--navy); padding: 70px 0 0; overflow: hidden; }
+  .band-wave { position: absolute; top: -1px; left: 0; width: 100%; height: 60px; }
+  .band-cta { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 22px; padding: 40px 0 44px; text-align: center; }
+  @media (min-width: 860px) { .band-cta { flex-direction: row; justify-content: center; gap: 48px; } }
+  .band-cta p { margin: 0; font-size: clamp(20px, 5vw, 28px); font-weight: 700; letter-spacing: .14em; }
+  .band .house { position: absolute; left: 2%; bottom: 0; width: 220px; opacity: .9; z-index: 1; }
+  .band .house.r { left: auto; right: 2%; width: 160px; transform: scaleX(-1); }
+  @media (max-width: 759px) { .band .house { width: 140px; opacity: .45; } .band .house.r { display: none; } }
+  footer { position: relative; z-index: 2; border-top: 1px solid rgba(255, 255, 255, .14); padding: 36px 0 110px; font-size: 13.5px; color: #d6d0ea; }
+  @media (min-width: 960px) { footer { padding-bottom: 40px; } }
+  footer .wrap { display: grid; gap: 22px; }
+  @media (min-width: 960px) { footer .wrap { grid-template-columns: 260px 1fr; align-items: start; } }
+  footer dl { margin: 0; display: grid; gap: 4px 20px; grid-template-columns: 1fr; }
+  @media (min-width: 700px) { footer dl { grid-template-columns: 110px 1fr; } }
+  footer dt { color: #fff; font-weight: 700; }
+  footer dd { margin: 0 0 8px; }
+  footer a { color: var(--orange); }
+  footer small { grid-column: 1 / -1; color: #a9a2c6; }
+
+  /* Mobile sticky CTA */
+  .sticky-cta {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 40;
+    padding: 12px 16px calc(14px + env(safe-area-inset-bottom));
+    background: rgba(251, 246, 238, .94); border-top: 1px solid var(--line);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    transform: translateY(120%); transition: transform .25s;
+  }
+  .sticky-cta.show { transform: none; }
+  .sticky-cta .btn { width: 100%; min-height: 54px; }
+  @media (min-width: 960px) { .sticky-cta { display: none; } }
+
+  /* ---------- オープニング：学長5人が画面いっぱいに飛び出す ---------- */
+  .intro {
+    position: fixed; inset: 0; z-index: 100; overflow: hidden; cursor: pointer;
+    background: radial-gradient(circle at 50% 50%, #4a3c8c, var(--navy) 70%);
+  }
+  .intro .p {
+    position: absolute; left: var(--x); top: var(--y); width: var(--s); height: auto; max-width: none;
+    opacity: 0; transform: translate(-50%, -50%) scale(.1);
+    filter: drop-shadow(0 14px 30px rgba(0, 0, 0, .45));
+  }
+  .intro.go .p { animation: pop 2.5s forwards; animation-delay: var(--d); }
+  @keyframes pop {
+    0%   { opacity: 0; transform: translate(-50%, -50%) scale(.1) rotate(var(--r)); animation-timing-function: cubic-bezier(.2, 1.4, .4, 1); }
+    26%  { opacity: 1; transform: translate(-50%, -50%) scale(1.05) rotate(0deg); animation-timing-function: ease-in; }
+    100% { opacity: 1; transform: translate(-50%, -50%) scale(1.9) rotate(0deg); }
+  }
+  .intro.go { animation: intro-out .7s ease 1.95s forwards; }
+  @keyframes intro-out { to { opacity: 0; visibility: hidden; } }
+  .intro .p1 { --x: 15%; --y: 24%; --s: 58vmin; --r: -18deg; --d: 0s; }
+  .intro .p2 { --x: 85%; --y: 24%; --s: 58vmin; --r: 18deg;  --d: .08s; }
+  .intro .p3 { --x: 15%; --y: 80%; --s: 58vmin; --r: 14deg;  --d: .16s; }
+  .intro .p4 { --x: 85%; --y: 80%; --s: 58vmin; --r: -14deg; --d: .24s; }
+  .intro .p5 { --x: 50%; --y: 54%; --s: 88vmin; --r: -6deg;  --d: .38s; }
+  @media (orientation: portrait) {
+    .intro .p1 { --x: 20%; --y: 17%; --s: 66vw; }
+    .intro .p2 { --x: 80%; --y: 17%; --s: 66vw; }
+    .intro .p3 { --x: 20%; --y: 85%; --s: 66vw; }
+    .intro .p4 { --x: 80%; --y: 85%; --s: 66vw; }
+    .intro .p5 { --s: 104vw; }
+  }
+
+  /* ---------- 登場アニメーション ---------- */
+  .ch { display: inline-block; opacity: 0; transform: translateY(.5em) scale(.8); }
+  .in .ch, .in.split .ch { animation: ch-in .55s cubic-bezier(.2, 1.4, .4, 1) forwards; animation-delay: calc(var(--i) * 35ms + var(--base, 0ms)); }
+  @keyframes ch-in { to { opacity: 1; transform: none; } }
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; transition-delay: var(--d, 0ms); }
+  .reveal.in { opacity: 1; transform: none; }
+  .box { opacity: 0; transform: translateY(26px) scale(.94); transition: opacity .5s ease, transform .7s cubic-bezier(.2, 1.3, .4, 1); transition-delay: var(--d, 0ms); }
+  .box.in { opacity: 1; transform: none; }
+  .hero .fv { opacity: 0; transform: translateY(16px); }
+  .hero.in .fv { animation: fv-in .8s cubic-bezier(.2, 1.2, .4, 1) forwards; animation-delay: var(--d, 0ms); }
+  .hero h1 .ja.fv { transform: translateY(16px) rotate(-5deg); }
+  .hero h1 .en-wrap.fv { transform: translateY(16px); }
+  .hero.in h1 .ja.fv { animation-name: fv-in-ja; }
+  .hero.in h1 .en-wrap.fv { animation-name: fv-in-en; }
+  @keyframes fv-in { to { opacity: 1; transform: none; } }
+  @keyframes fv-in-ja { to { opacity: 1; transform: rotate(-5deg); } }
+  @keyframes fv-in-en { 0% { opacity: 0; transform: translateY(24px) scale(.7); } 70% { opacity: 1; transform: translateY(-4px) scale(1.03); } 100% { opacity: 1; transform: none; } }
+  .hero .art-in { opacity: 0; }
+  .hero.in .art-in { animation: fv-in 1s cubic-bezier(.2, 1.2, .4, 1) forwards; animation-delay: var(--d, 0ms); }
+  .hero.in .gakucho.art-in { animation-name: gk-in; }
+  @keyframes gk-in { from { opacity: 0; transform: translateX(-50%) translateY(40px) scale(.85); } to { opacity: 1; transform: translateX(-50%); } }
+  .hero.in .sign.art-in { animation-name: sign-in; }
+  @keyframes sign-in { from { opacity: 0; transform: rotate(30deg) scale(.5); } to { opacity: 1; transform: rotate(10deg); } }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .ch, .reveal, .box, .hero .fv, .hero .art-in { opacity: 1; transform: none; animation: none !important; transition: none; }
+    .hero h1 .ja.fv { transform: rotate(-5deg); }
+    .hero h1 .en-wrap.fv { transform: none; }
+    .bob, .float, .confetti i, .hero h1 .en .ln, .o-pk .lit { animation: none !important; }
+    .sparks { display: none; }
+    .confetti { display: none; }
+    .tl::before { transform: none; transition: none; }
+    .btn, .sticky-cta { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- 使い回すお菓子・アイコン -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="c-pk" viewBox="0 0 60 54"><path d="M29 12q0-8 7-11" stroke="#4d8a3c" stroke-width="5" fill="none" stroke-linecap="round"/><ellipse cx="30" cy="32" rx="28" ry="21" fill="#f5893a"/><ellipse cx="30" cy="32" rx="12" ry="21" fill="#f99b52"/><path d="M15 27l6-8 6 8zM33 27l6-8 6 8zM27 34l3-5 3 5zM13 38q17 14 34 0l-6 3-5-3-6 3-6-3-5 3z" fill="#3b2a1a"/></symbol>
+    <symbol id="o-pk" viewBox="0 0 100 100" overflow="visible">
+      <radialGradient id="o-g" cx=".38" cy=".32" r=".8"><stop offset="0" stop-color="#ffe9a6"/><stop offset=".35" stop-color="#f9a83c"/><stop offset=".75" stop-color="#d0611a"/><stop offset="1" stop-color="#8e390c"/></radialGradient>
+      <radialGradient id="o-lit" cx=".5" cy=".55" r=".6"><stop offset="0" stop-color="#fffbe0"/><stop offset=".45" stop-color="#ffd85a"/><stop offset="1" stop-color="#ff8a12"/></radialGradient>
+      <linearGradient id="o-stem" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#6fae4a"/><stop offset="1" stop-color="#2f5a22"/></linearGradient>
+      <path d="M47 20c-1-8 2-15 10-19l4 4c-6 3-7 9-6 15z" fill="url(#o-stem)" stroke="#23421a" stroke-width="1.5"/>
+      <path d="M50 19C31 12 3 23 3 58c0 28 22 41 47 41s47-13 47-41C97 23 69 12 50 19z" fill="url(#o-g)" stroke="#6a2a08" stroke-width="2"/>
+      <path d="M50 21c-15 10-16 66 0 77M50 21c15 10 16 66 0 77M28 18C11 34 13 82 31 96M72 18c17 16 15 64-3 78" stroke="#7a300a" stroke-width="2.4" fill="none" opacity=".45"/>
+      <ellipse cx="30" cy="36" rx="12" ry="7" fill="#fff" opacity=".28" transform="rotate(-30 30 36)"/>
+      <g class="lit" style="filter:drop-shadow(0 0 4px #ffcf4a) drop-shadow(0 0 10px rgba(255,150,30,.9))">
+        <path d="M22 54l11-18 9 19zM58 55l9-19 11 18zM45 64l5-8 5 8zM20 67q30 28 60 0l-6 5-6-4-6 6-6-5-6 6-6-5-6 5-6-5z" fill="url(#o-lit)" stroke="#6a2a08" stroke-width="1.6" stroke-linejoin="round"/>
+      </g>
+    </symbol>
+    <symbol id="spark" viewBox="0 0 20 20"><path d="M10 0c.8 5 4.2 9.2 10 10-5.8.8-9.2 5-10 10-.8-5-4.2-9.2-10-10 5.8-.8 9.2-5 10-10z" fill="#ffe08a"/></symbol>
+    <symbol id="c-bat" viewBox="0 0 64 30"><path d="M2 10q11-9 21 1q3-7 9-7t9 7q10-10 21-1q-9 0-12 9q-5-5-9 1q-3-5-9-5t-9 5q-4-6-9-1q-3-9-12-9z" fill="#2b2453"/></symbol>
+    <symbol id="i-arr" viewBox="0 0 16 12"><path d="M1 6h13M9 1l5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-pk" viewBox="0 0 26 26"><path d="M12 6q0-3 3-4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/><ellipse cx="13" cy="15" rx="11" ry="9" fill="currentColor"/><path d="M7 13l2-3 2 3zM15 13l2-3 2 3zM7.5 17q5.5 4 11 0l-2 1.2-1.8-1.2-1.7 1.2-1.7-1.2-1.8 1.2z" fill="#f5893a"/></symbol>
+  </defs>
+</svg>
+
+<!-- オープニング演出（クリックでスキップ） -->
+<div class="intro" id="intro" aria-hidden="true">
+  <img class="p p1" src="images/gakucho-1.png" alt="">
+  <img class="p p2" src="images/gakucho-3.png" alt="">
+  <img class="p p3" src="images/gakucho-4.png" alt="">
+  <img class="p p4" src="images/gakucho-2.png" alt="">
+  <img class="p p5" src="images/gakucho-5.png" alt="">
+</div>
+
+<header class="header">
+  <div class="wrap">
+    <a class="logo" href="#top" aria-label="桃下村塾 トップへ">
+      <img class="logo-fig" src="images/gakucho-1.png" alt="">
+      <span class="logo-text">
+        <b>桃下村塾</b>
+        <svg viewBox="0 0 150 10" aria-hidden="true" fill="none" stroke="#d9cfff" stroke-width="1">
+          <path d="M0 6H58M92 6H150"/><path d="M48 3l4 3-4 3M102 3l-4 3 4 3"/><path d="M64 7l6-5 5 4 5-4 6 5"/>
+        </svg>
+      </span>
+    </a>
+    <nav class="nav" aria-label="ページ内ナビゲーション">
+      <a class="link" href="#overview">イベント概要</a>
+      <a class="link" href="#program">プログラム</a>
+      <a class="link" href="#entry">参加方法</a>
+      <a class="link" href="#faq">よくある質問</a>
+      <a class="btn btn-sm" href="#entry"><svg class="pk" aria-hidden="true" style="color:#2b2453"><use href="#i-pk"/></svg><span>参加方法<span class="hide-sm">はこちら</span></span><svg class="arr" aria-hidden="true"><use href="#i-arr"/></svg></a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 1. ファーストビュー -->
+  <section class="hero" aria-labelledby="hero-title" style="padding-bottom:0">
+    <div class="confetti" id="confetti" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h1 id="hero-title">
+            <span class="ja fv" style="--d:100ms">那須学長と語る</span>
+            <span class="en-wrap fv" style="--d:350ms"><img class="title-logo" id="title-en" src="images/title-logo.png" alt="HALLOWEEN PARTY" width="802" height="307"></span>
+            <span class="sparks" id="sparks" aria-hidden="true"></span>
+          </h1>
+          <p class="catch split" style="--base:900ms">学生の悩みを、<br class="sp">解決策とセットで学長へ。</p>
+          <p class="lead fv" style="--d:1500ms">サークル・団体の代表が、<br>悩みと解決策を那須学長へ届ける夜。</p>
+          <ul class="info-row">
+            <li class="fv" style="--d:1650ms">
+              <svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="#f5893a" stroke-width="2"><rect x="3" y="5" width="22" height="20" rx="3"/><path d="M3 11h22M9 2v5M19 2v5"/><path d="M8 15.5h2M13 15.5h2M18 15.5h2M8 20h2M13 20h2" stroke-linecap="round"/></svg>
+              <span>2026.<span class="num">10.28</span> (水)<br>18:30 – 21:00</span>
+            </li>
+            <li class="fv" style="--d:1750ms">
+              <svg viewBox="0 0 28 28" aria-hidden="true"><path d="M14 2a9 9 0 0 0-9 9c0 7 9 15 9 15s9-8 9-15a9 9 0 0 0-9-9z" fill="#f5893a"/><circle cx="14" cy="11" r="3.4" fill="#2b2453"/></svg>
+              <span>KIBINOVE 1階</span>
+            </li>
+            <li class="fv" style="--d:1850ms">
+              <svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="#f5893a" stroke-width="2"><ellipse cx="11" cy="9" rx="8" ry="3.5"/><path d="M3 9v5c0 2 3.6 3.5 8 3.5s8-1.5 8-3.5V9"/><ellipse cx="18" cy="17" rx="7" ry="3"/><path d="M11 17v4c0 1.7 3.1 3 7 3s7-1.3 7-3v-4"/></svg>
+              <span>参加無料・申込不要</span>
+            </li>
+          </ul>
+          <a class="btn fv" style="--d:2000ms" href="#entry" id="hero-cta"><svg class="pk" aria-hidden="true" style="color:#2b2453"><use href="#i-pk"/></svg>参加方法はこちら<svg class="arr" aria-hidden="true"><use href="#i-arr"/></svg></a>
+        </div>
+        <div class="hero-art" id="hero-art" aria-hidden="true">
+          <img class="pile art-in" style="--d:300ms" src="images/sweets/sweets-hero-pile.png" alt="">
+          <img class="gakucho art-in" style="--d:800ms" src="images/gakucho-5.png" alt="">
+        </div>
+      </div>
+    </div>
+    <svg class="hero-wave" viewBox="0 0 1440 110" preserveAspectRatio="none" aria-hidden="true"><path d="M0 60C180 20 360 10 560 40S900 100 1100 70 1360 20 1440 30V110H0Z" fill="#fbf6ee"/></svg>
+  </section>
+
+  <!-- 2. このイベントのひとこと -->
+  <section id="concept" data-deco="concept">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-label reveal">
+          <span class="script">About</span>
+          <h2>このイベントの<br>ひとこと<svg aria-hidden="true"><use href="#c-pk"/></svg></h2>
+        </div>
+        <div class="vline"></div>
+        <div class="about-main">
+          <h3 class="split"><span class="u">学生の悩みを、</span><br><span class="u">解決策とセットで学長へ。</span></h3>
+          <p class="reveal">ハロウィンの夜に、サークル・団体の代表と那須学長が、肩の力を抜いて語り合う場をつくります。不満を伝えるだけで終わらせず、自分たちで考えた解決策と、大学に求める協力を添えて届けます。</p>
+        </div>
+        <div class="polaroids reveal">
+          <figure class="pol p1" style="margin:0"><img src="images/polaroid-house.png" alt="満月の夜の洋館とジャック・オー・ランタンのイラスト"></figure>
+          <figure class="pol p2" style="margin:0"><img src="images/polaroid-gakucho.webp" alt="ヴァンパイア姿の那須学長のイラスト"></figure>
+          <span class="script">Trick or<br>Treat!</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. 3つの狙い -->
+  <section id="purpose" class="tone" data-deco="purpose">
+    <svg class="tone-wave" viewBox="0 0 1440 35" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22C240 2 480 0 720 16S1200 34 1440 10V35H0Z" fill="#fffaf3"/></svg>
+    <div class="wrap">
+      <div class="head">
+        <span class="script reveal">Purpose</span>
+        <h2 class="split">このイベントの<span class="big">3</span>つの狙い</h2>
+      </div>
+      <div class="aims">
+        <article class="aim box">
+          <div class="ic"><svg viewBox="0 0 44 44" fill="none" stroke="#3b3159" stroke-width="2" stroke-linejoin="round"><path d="M22 6C12 6 4 12.5 4 20.5c0 4.5 2.5 8.5 6.4 11.2L8.5 39l8.8-4.5c1.5.3 3.1.5 4.7.5 10 0 18-6.5 18-14.5S32 6 22 6z"/><circle cx="14.5" cy="20.5" r="1.8" fill="#3b3159"/><circle cx="22" cy="20.5" r="1.8" fill="#3b3159"/><circle cx="29.5" cy="20.5" r="1.8" fill="#3b3159"/></svg></div>
+          <div class="num">01</div>
+          <h3>現場の声を直接届ける</h3>
+          <p>サークル・団体が日頃感じている悩みを、学長へ直接伝える機会をつくる。</p>
+        </article>
+        <article class="aim box">
+          <div class="ic"><svg viewBox="0 0 44 44" fill="none" stroke="#3b3159" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 8a11 11 0 0 0-6.4 20c1.1.8 1.7 2 1.7 3.4V33h9.4v-1.6c0-1.4.6-2.6 1.7-3.4A11 11 0 0 0 22 8z"/><path d="M17.5 37h9M19 41h6M22 2v2.5M9 7l1.8 1.8M35 7l-1.8 1.8M4 19h2.5M37.5 19H40"/></svg></div>
+          <div class="num">02</div>
+          <h3>解決策とセットで提案</h3>
+          <p>不満で終わらせず、自分たちで考えた解決策を添えて提案する。</p>
+        </article>
+        <article class="aim box">
+          <div class="ic"><svg viewBox="0 0 44 44" fill="none" stroke="#3b3159" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="14" r="5.5"/><path d="M12 34c0-6 4.5-10 10-10s10 4 10 10z"/><circle cx="10" cy="18" r="4"/><path d="M3 32c0-4 2.6-7 6.5-7 1.4 0 2.6.3 3.6.9"/><circle cx="34" cy="18" r="4"/><path d="M41 32c0-4-2.6-7-6.5-7-1.4 0-2.6.3-3.6.9"/></svg></div>
+          <div class="num">03</div>
+          <h3>ハロウィンで距離を縮める</h3>
+          <p>仮装で集まる非日常の場で、学長と学生の距離を縮める。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. 開催概要 ＋ 当日の流れ -->
+  <section data-deco="duo1">
+    <svg class="tone-wave" viewBox="0 0 1440 35" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22C240 2 480 0 720 16S1200 34 1440 10V35H0Z" fill="#fbf6ee"/></svg>
+    <div class="wrap">
+      <div class="duo">
+        <div id="overview">
+          <div class="head">
+            <span class="script reveal">Overview</span>
+            <h2 class="split">開催概要</h2>
+          </div>
+          <dl class="panel ov box">
+            <div><dt>名称</dt><dd>那須学長と語る HALLOWEEN PARTY</dd></div>
+            <div><dt>日時</dt><dd>2026年10月28日（水）18:30〜21:00<br><small>途中参加・途中退出OK</small></dd></div>
+            <div><dt>会場</dt><dd>KIBINOVE 1階</dd></div>
+            <div><dt>対象</dt><dd>どなたでも参加できます<br><small>主に岡山大学の学生を想定しています</small></dd></div>
+            <div><dt>参加費</dt><dd>無料（申込不要）</dd></div>
+            <div><dt>服装</dt><dd>ドレスコード「ハロウィン」<br><small>帽子やマントなど、小物だけでも歓迎</small></dd></div>
+            <div><dt>主催</dt><dd>桃下村塾／岡山大学スタートアップ創出本部</dd></div>
+            <div><dt>共催</dt><dd>RAC、陸上部、大学祭実行委員会、Hello AI、ゆげ、JumpingCats、DS部</dd></div>
+          </dl>
+        </div>
+        <div id="program">
+          <div class="head">
+            <span class="script reveal">Program</span>
+            <h2><span class="split">当日の流れ</span><span class="note reveal">※時間配分は予定です</span></h2>
+          </div>
+          <ol class="panel tl box">
+            <li class="reveal"><div class="time">18:30</div><div><h3>開場・受付</h3><p>仮装でご来場ください。受付を済ませて着席。</p></div></li>
+            <li class="reveal"><div class="time">18:45</div><div><h3>開会・学長挨拶</h3><p>那須学長から、開会のご挨拶。</p></div></li>
+            <li class="reveal"><div class="time">19:00</div><div><h3>悩みと解決策の発表</h3><p>各団体の代表が順に発表します。</p></div></li>
+            <li class="reveal"><div class="time">20:15</div><div><h3>語り合い・交流</h3><p>レセプションエリアで、学長を囲んで語り合うハロウィンの交流タイム。</p></div></li>
+            <li class="reveal"><div class="time">21:00</div><div><h3>閉会</h3><p>終了・解散。途中参加・途中退出も自由です。</p></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. 発表の進め方 ＋ ハロウィンの演出 -->
+  <section class="tone" data-deco="duo2">
+    <svg class="tone-wave" viewBox="0 0 1440 35" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22C240 2 480 0 720 16S1200 34 1440 10V35H0Z" fill="#fffaf3"/></svg>
+    <div class="wrap">
+      <div class="duo">
+        <div id="format">
+          <div class="head">
+            <span class="script reveal">Format</span>
+            <h2 class="split">発表の進め方</h2>
+          </div>
+          <div class="steps">
+            <article class="step box">
+              <div class="top"><svg viewBox="0 0 30 30"><path d="M15 3C8.4 3 3 7.4 3 12.8c0 3 1.7 5.7 4.3 7.5L6 25l5.9-3c1 .2 2 .3 3.1.3 6.6 0 12-4.4 12-9.8S21.6 3 15 3z" fill="#f5893a"/><circle cx="10" cy="13" r="1.4" fill="#fff"/><circle cx="15" cy="13" r="1.4" fill="#fff"/><circle cx="20" cy="13" r="1.4" fill="#fff"/></svg><div><div class="label">STEP 1</div><h3>悩み</h3></div></div>
+              <p>いま困っていることを、具体的な場面とあわせて伝える。</p>
+            </article>
+            <article class="step box">
+              <div class="top"><svg viewBox="0 0 30 30" fill="none" stroke="#f5893a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4a8 8 0 0 0-4.7 14.5c.8.6 1.2 1.4 1.2 2.4V22h7v-1.1c0-1 .4-1.8 1.2-2.4A8 8 0 0 0 15 4z"/><path d="M12 25.5h6"/></svg><div><div class="label">STEP 2</div><h3>解決策</h3></div></div>
+              <p>自分たちで考えた案と、必要な協力を示す。</p>
+            </article>
+            <article class="step box">
+              <div class="top"><svg viewBox="0 0 30 30"><circle cx="15" cy="10" r="5.5" fill="#f5893a"/><path d="M5 27c0-6 4.5-10 10-10s10 4 10 10z" fill="#f5893a"/></svg><div><div class="label">STEP 3</div><h3>学長へのお願い</h3></div></div>
+              <p>大学として後押しできることを、学長に相談する。</p>
+            </article>
+          </div>
+          <div class="pills reveal">
+            <span class="pill"><b>持ち時間</b>4分／団体（予定）</span>
+            <span class="pill"><b>発表資料</b>不要</span>
+          </div>
+        </div>
+        <div id="halloween">
+          <div class="head">
+            <span class="script reveal">Halloween</span>
+            <h2 class="split">ハロウィンの演出</h2>
+          </div>
+          <div class="hw-row">
+            <article class="hw box">
+              <div class="ic"><svg viewBox="0 0 42 42"><path d="M8 32L22 4l2 9 9 19z" fill="#3b3159"/><ellipse cx="21" cy="33" rx="19" ry="5" fill="#3b3159"/><rect x="12" y="25" width="19" height="4" fill="#8a6cd0"/></svg></div>
+              <h3>ドレスコード<br>「ハロウィン」</h3>
+              <p>仮装でご来場。帽子やマントなど、小物だけでも歓迎。</p>
+            </article>
+            <article class="hw box">
+              <div class="ic"><svg aria-hidden="true"><use href="#c-pk"/></svg></div>
+              <h3>会場装飾</h3>
+              <p>KIBINOVE 1階に、かぼちゃ・クモの巣・照明などを設置。</p>
+            </article>
+            <article class="hw box">
+              <div class="ic"><img src="images/gakucho-4.png" alt=""></div>
+              <h3>学長キャラクター</h3>
+              <p>ヴァンパイア姿の那須学長のイラストが、チラシや告知に登場。</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. レセプションエリア -->
+  <section id="reception" data-deco="reception">
+    <svg class="tone-wave" viewBox="0 0 1440 35" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22C240 2 480 0 720 16S1200 34 1440 10V35H0Z" fill="#fbf6ee"/></svg>
+    <div class="wrap">
+      <div class="head">
+        <span class="script reveal">Reception Area</span>
+        <h2 class="split">レセプションエリア</h2>
+      </div>
+      <div class="panel rc box">
+        <div>
+          <p class="big">発表のあとは、<br>学長を囲んで語り合う時間。</p>
+          <p>発表した団体も、聞きに来た人も、ここでは同じテーブル。発表の続きを話したり、気になった団体に声をかけたり、学長に直接質問したり。ハロウィンの夜を自由に楽しんでください。</p>
+        </div>
+        <div class="chips">
+          <div class="chip box"><span class="k">TIME</span><span class="v">20:15–21:00<small>予定</small></span></div>
+          <div class="chip box"><span class="k">PLACE</span><span class="v"><span style="white-space:nowrap">KIBINOVE 1階</span><small>会場内</small></span></div>
+          <div class="chip box wide"><span class="k">JOIN</span><span class="v">交流タイムからの参加もOK<small>途中参加・途中退出は自由です</small></span></div>
+          <div class="chip box wide"><span class="k">STYLE</span><span class="v">仮装のまま、気軽に<small>学長とフラットに話せる場です</small></span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. 参加方法 -->
+  <section id="entry" class="tone" data-deco="entry">
+    <svg class="tone-wave" viewBox="0 0 1440 35" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22C240 2 480 0 720 16S1200 34 1440 10V35H0Z" fill="#fffaf3"/></svg>
+    <div class="wrap">
+      <div class="head">
+        <span class="script reveal">Entry</span>
+        <h2 class="split">参加方法</h2>
+      </div>
+      <div class="panel entry box">
+        <p class="big">申込<em>不要</em>。<br>当日、会場へ。</p>
+        <p>事前の申し込みはいりません。当日、KIBINOVE 1階へ直接お越しください。</p>
+        <ul class="entry-list">
+          <li><span>申込</span><span>不要（当日参加OK）</span></li>
+          <li><span>参加費</span><span>無料</span></li>
+          <li><span>対象</span><span>どなたでも（主に岡山大学の学生）</span></li>
+          <li><span>途中参加</span><span>途中参加・途中退出OK</span></li>
+          <li><span>発表資料</span><span>不要</span></li>
+        </ul>
+        <a class="btn btn-line" href="mailto:pgjy1ruf@s.okayama-u.ac.jp?subject=%E3%80%90HALLOWEEN%20PARTY%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">メールで問い合わせる<svg class="arr" aria-hidden="true"><use href="#i-arr"/></svg></a>
+        <p class="contact">お問い合わせ：pgjy1ruf@s.okayama-u.ac.jp</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. FAQ -->
+  <section id="faq" data-deco="faq">
+    <svg class="tone-wave" viewBox="0 0 1440 35" preserveAspectRatio="none" aria-hidden="true"><path d="M0 22C240 2 480 0 720 16S1200 34 1440 10V35H0Z" fill="#fbf6ee"/></svg>
+    <div class="wrap">
+      <div class="head">
+        <span class="script reveal">FAQ</span>
+        <h2 class="split">よくある質問</h2>
+      </div>
+      <div class="faq">
+        <details class="reveal">
+          <summary>申し込みは必要ですか？</summary>
+          <div class="a">不要です。当日、直接会場へお越しください。</div>
+        </details>
+        <details class="reveal">
+          <summary>仮装は必須ですか？</summary>
+          <div class="a">ドレスコードは「ハロウィン」ですが、帽子やマントなど小物だけでの参加も歓迎です。気軽にお越しください。</div>
+        </details>
+        <details class="reveal">
+          <summary>参加費はかかりますか？</summary>
+          <div class="a">無料です。</div>
+        </details>
+        <details class="reveal">
+          <summary>団体の代表者以外も参加できますか？</summary>
+          <div class="a">はい、どなたでも参加できます。主に岡山大学の学生を想定しています。</div>
+        </details>
+        <details class="reveal">
+          <summary>途中参加・途中退出はできますか？</summary>
+          <div class="a">できます。レセプションエリアでの交流タイムだけの参加も歓迎です。</div>
+        </details>
+        <details class="reveal">
+          <summary>発表では何を話せばいいですか？資料は必要？</summary>
+          <div class="a">「悩み」「解決策」「学長へのお願い」の3ステップで、1団体4分程度（予定）でお話しいただきます。発表資料は不要です。詳しくは<a href="#format">発表の進め方</a>をご覧ください。</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- 9. 最後の帯＋フッター -->
+<div class="band">
+  <svg class="band-wave" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H1440V20C1240 50 1040 56 820 34S420 0 220 22 40 50 0 40Z" fill="#fbf6ee"/></svg>
+  <svg class="house" viewBox="0 0 220 140" aria-hidden="true">
+    <g fill="#1d1840"><path d="M0 140V112q30-18 60-6t50-8 60 4 50 8V140z"/><path d="M70 120V72l28-26 28 26v48z"/><path d="M84 52V24l14-20 14 20v28z"/><path d="M126 120V88l18-16 18 16v32z"/><path d="M34 120V96L20 60 8 96V120zM196 120V100l-6-30-8 30v20z"/></g>
+    <g fill="#f5b84d"><rect x="92" y="30" width="12" height="14" rx="6"/><rect x="80" y="82" width="12" height="14"/><rect x="104" y="82" width="12" height="14"/><rect x="138" y="94" width="12" height="12"/><path d="M92 120v-14a6 6 0 0 1 12 0v14z"/></g>
+  </svg>
+  <svg class="house r" viewBox="0 0 220 140" aria-hidden="true">
+    <g fill="#1d1840"><path d="M0 140V112q30-18 60-6t50-8 60 4 50 8V140z"/><path d="M40 120V80l-10-50-12 50v40zM120 120V70l-8-40-10 40v50zM180 120V90l-6-30-8 30v30z"/></g>
+  </svg>
+  <div class="wrap band-cta">
+    <p class="reveal">みんなでつくる、特別な夜を。</p>
+    <a class="btn reveal" href="#entry"><svg class="pk" aria-hidden="true" style="color:#2b2453"><use href="#i-pk"/></svg>参加方法はこちら<svg class="arr" aria-hidden="true"><use href="#i-arr"/></svg></a>
+  </div>
+  <footer>
+    <div class="wrap">
+      <a class="logo" href="#top" aria-label="桃下村塾 トップへ">
+        <img class="logo-fig" src="images/gakucho-1.png" alt="">
+        <span class="logo-text">
+          <b>桃下村塾</b>
+          <svg viewBox="0 0 150 10" aria-hidden="true" fill="none" stroke="#d9cfff" stroke-width="1">
+            <path d="M0 6H58M92 6H150"/><path d="M48 3l4 3-4 3M102 3l-4 3 4 3"/><path d="M64 7l6-5 5 4 5-4 6 5"/>
+          </svg>
+        </span>
+      </a>
+      <dl>
+        <dt>主催</dt>
+        <dd>桃下村塾／岡山大学スタートアップ創出本部</dd>
+        <dt>共催</dt>
+        <dd>RAC、陸上部、大学祭実行委員会、Hello AI、ゆげ、JumpingCats、DS部</dd>
+        <dt>お問い合わせ</dt>
+        <dd><a href="mailto:pgjy1ruf@s.okayama-u.ac.jp">pgjy1ruf@s.okayama-u.ac.jp</a></dd>
+      </dl>
+      <small>&copy; 2026 那須学長と語る HALLOWEEN PARTY</small>
+    </div>
+  </footer>
+</div>
+
+<div class="sticky-cta" id="sticky-cta">
+  <a class="btn" href="#entry"><svg class="pk" aria-hidden="true" style="color:#2b2453"><use href="#i-pk"/></svg>参加方法はこちら<svg class="arr" aria-hidden="true"><use href="#i-arr"/></svg></a>
+</div>
+
+<script>
+(function () {
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var NS = 'http://www.w3.org/2000/svg';
+
+  // ---- 読みやすい改行：文節の区切り（ひらがな→漢字・カタカナ、句読点の後）に改行候補を入れる ----
+  var ZW = '​';
+  var boundary = /([、。！？」）』])|([ぁ-ゖ])(?=[一-龯々ァ-ヶーA-Za-z0-9「『（])/g;
+  function addBreaks(root) {
+    var walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      acceptNode: function (n) {
+        var p = n.parentNode.nodeName;
+        return (p === 'SCRIPT' || p === 'STYLE' || p === 'TITLE') ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var nodes = [];
+    while (walker.nextNode()) nodes.push(walker.currentNode);
+    nodes.forEach(function (n) { n.nodeValue = n.nodeValue.replace(boundary, '$1$2' + ZW); });
+  }
+  addBreaks(document.body);
+
+  // ---- 見出しを1文字ずつに分解（文節ごとにまとめて改行位置を保つ） ----
+  function splitChars(el) {
+    var i = 0;
+    var label = el.textContent.replace(/​/g, '');
+    (function walk(node) {
+      Array.prototype.slice.call(node.childNodes).forEach(function (c) {
+        if (c.nodeType === 3) {
+          var frag = document.createDocumentFragment();
+          c.nodeValue.split(/(​| )/).forEach(function (part) {
+            if (!part || part === ZW) return;
+            if (part === ' ') { frag.appendChild(document.createTextNode(' ')); return; }
+            var ph = document.createElement('span');
+            ph.className = 'ph';
+            Array.from(part).forEach(function (ch) {
+              var s = document.createElement('span');
+              s.className = 'ch';
+              s.style.setProperty('--i', i++);
+              s.textContent = ch;
+              ph.appendChild(s);
+            });
+            frag.appendChild(ph);
+          });
+          node.replaceChild(frag, c);
+        } else if (c.nodeType === 1 && c.nodeName !== 'BR') {
+          walk(c);
+        }
+      });
+    })(el);
+    el.setAttribute('aria-label', label);
+  }
+  if (!reduce) document.querySelectorAll('.split').forEach(splitChars);
+
+  // ---- お菓子の飾りを配置（画像は images/sweets/） ----
+  // [画像名, 左%, 上（数値=% / 'edge'=セクションの境目）, 幅px, 回転, PCのみ]
+  var layouts = {
+    heroLeft:  [['hero-left', 1, 46, 120, 0, 1]],
+    concept:   [['choco', 1, 26, 100, -6, 1], ['beans-a', 4, 64, 80, 10, 1], ['bean-red', 97, 64, 46, 20, 1]],
+    purpose:   [['ghost-bat', 62, 'edge', 210, 0, 0], ['popcorn', 96, 'edge', 120, 6, 1], ['bean-green', 12, 'edge', 50, -20, 1]],
+    duo1:      [['pumpkin', 42, 'edge', 120, -8, 0], ['wrap-purple', 3, 'edge', 110, 0, 1], ['lolli-pink', 95, 'edge', 92, 8, 1], ['bean-red', 84, 'edge', 46, -10, 1]],
+    duo2:      [['beans-b', 30, 'edge', 170, 0, 0], ['wrap-orange', 80, 'edge', 140, -6, 1], ['candy-bag', 97, 40, 110, 6, 1], ['ghost-cookie', 2, 60, 96, -8, 1]],
+    reception: [['choco', 94, 'edge', 92, 14, 1], ['bean-green', 8, 'edge', 50, 20, 0]],
+    entry:     [['wrap-purple', 92, 'edge', 104, 10, 0], ['beans-a', 7, 'edge', 80, 0, 1], ['ghost-cookie', 96, 70, 90, 8, 1]],
+    faq:       [['pumpkin', 6, 'edge', 100, 10, 1], ['bean-red', 90, 'edge', 46, -10, 0], ['lolli-pink', 95, 60, 84, -8, 1]]
+  };
+  function place(container, list) {
+    list.forEach(function (d, n) {
+      var img = document.createElement('img');
+      img.src = 'images/sweets/sweets-' + d[0] + '.png';
+      img.alt = '';
+      img.setAttribute('aria-hidden', 'true');
+      img.className = 'deco bob' + (d[2] === 'edge' ? ' edge' : '') + (d[5] ? ' pc' : '');
+      img.style.left = d[1] + '%';
+      if (d[2] !== 'edge') img.style.top = d[2] + '%';
+      img.style.setProperty('--w', d[3] + 'px');
+      img.style.setProperty('--r', d[4] + 'deg');
+      img.style.setProperty('--t', (4 + (n % 4)) + 's');
+      img.style.animationDelay = (-n * .7) + 's';
+      container.appendChild(img);
+    });
+  }
+  var C = { red: '#e8505b', pink: '#f07aa8', yellow: '#f6c945', green: '#7bc96f', purple: '#8a5cd0', orange: '#f5893a', blue: '#5aa9e6' };
+  place(document.querySelector('.hero'), layouts.heroLeft);
+  document.querySelectorAll('[data-deco]').forEach(function (sec) {
+    var l = layouts[sec.getAttribute('data-deco')];
+    if (l) place(sec, l);
+  });
+
+  // ---- 紙吹雪（お菓子色）をファーストビュー全体に降らせる ----
+  if (!reduce) {
+    var cf = document.getElementById('confetti');
+    var colors = [C.red, C.pink, C.yellow, C.green, C.purple, C.orange, C.blue];
+    var count = window.innerWidth < 760 ? 26 : 54;
+    var h = document.querySelector('.hero').offsetHeight + 60;
+    for (var k = 0; k < count; k++) {
+      var i = document.createElement('i');
+      var w = 6 + Math.random() * 8;
+      i.style.left = (Math.random() * 100) + '%';
+      i.style.width = w + 'px';
+      i.style.height = (Math.random() < .4 ? w : w * 1.8) + 'px';
+      if (Math.random() < .3) i.style.borderRadius = '50%';
+      i.style.background = colors[k % colors.length];
+      i.style.opacity = .55 + Math.random() * .4;
+      i.style.setProperty('--t', (6 + Math.random() * 7) + 's');
+      i.style.setProperty('--d', (-Math.random() * 12) + 's');
+      i.style.setProperty('--h', h + 'px');
+      i.style.setProperty('--spin', (Math.random() < .5 ? -1 : 1) * (360 + Math.random() * 540) + 'deg');
+      cf.appendChild(i);
+    }
+  }
+
+  // ---- タイトル周りのきらめき（星形と光の粒） ----
+  // フォント読み込み後に位置を測る（先に測るとタイトルの大きさが変わってずれる）
+  if (!reduce) (document.fonts ? document.fonts.ready : Promise.resolve()).then(function () {
+    var sparks = document.getElementById('sparks');
+    var title = document.getElementById('title-en');
+    var h1 = document.getElementById('hero-title');
+    var tb = title.getBoundingClientRect(), hb = h1.getBoundingClientRect();
+    var x0 = tb.left - hb.left, y0 = tb.top - hb.top;
+    for (var s = 0; s < 22; s++) {
+      var star = s % 3 !== 2;
+      var el = star ? document.createElementNS(NS, 'svg') : document.createElement('i');
+      if (star) {
+        el.setAttribute('viewBox', '0 0 20 20');
+        var u = document.createElementNS(NS, 'use');
+        u.setAttribute('href', '#spark');
+        el.appendChild(u);
+      }
+      el.style.left = (x0 + Math.random() * tb.width + 20) + 'px';
+      el.style.top = (y0 + Math.random() * tb.height + 10) + 'px';
+      el.style.setProperty('--s', (star ? 8 + Math.random() * 16 : 3 + Math.random() * 3) + 'px');
+      el.style.setProperty('--t', (1.6 + Math.random() * 2) + 's');
+      el.style.setProperty('--d', (Math.random() * 3) + 's');
+      sparks.appendChild(el);
+    }
+  });
+
+  // ---- オープニング：学長5人が飛び出してフェードアウト → ファーストビュー開始 ----
+  var hero = document.querySelector('.hero');
+  var intro = document.getElementById('intro');
+  var startHero = function () {
+    hero.classList.add('in');
+    var g = hero.querySelector('.gakucho');
+    setTimeout(function () { g.classList.remove('art-in'); g.style.opacity = 1; g.classList.add('float'); }, 1600);
+  };
+  if (reduce || !intro) {
+    if (intro) intro.remove();
+    startHero();
+  } else {
+    var ready = Array.prototype.map.call(intro.querySelectorAll('img'), function (img) {
+      return img.decode ? img.decode().catch(function () {}) : Promise.resolve();
+    });
+    Promise.race([Promise.all(ready), new Promise(function (r) { setTimeout(r, 1500); })]).then(function () {
+      intro.classList.add('go');
+      setTimeout(startHero, 1950);
+    });
+    intro.addEventListener('animationend', function (e) { if (e.target === intro) intro.remove(); });
+    intro.addEventListener('click', function () { intro.remove(); startHero(); });
+  }
+
+  // ---- スクロールで登場（同じ親の中では順番に） ----
+  var targets = document.querySelectorAll('.reveal, .box, .split');
+  var stagger = new Map();
+  targets.forEach(function (el) {
+    if (!el.classList.contains('reveal') && !el.classList.contains('box')) return;
+    var p = el.parentNode, n = stagger.get(p) || 0;
+    el.style.setProperty('--d', (n * 110) + 'ms');
+    stagger.set(p, n + 1);
+  });
+  if (!('IntersectionObserver' in window) || reduce) {
+    targets.forEach(function (el) { el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+    targets.forEach(function (el) { if (!el.closest('.hero')) io.observe(el); });
+  }
+
+  // ---- スマホ用固定CTA：ファーストビューのCTAが見えなくなったら表示、参加方法欄では隠す ----
+  if ('IntersectionObserver' in window) {
+    var sticky = document.getElementById('sticky-cta');
+    var heroGone = false, entryIn = false;
+    var update = function () { sticky.classList.toggle('show', heroGone && !entryIn); };
+    new IntersectionObserver(function (e) { heroGone = !e[0].isIntersecting; update(); }).observe(document.getElementById('hero-cta'));
+    new IntersectionObserver(function (e) { entryIn = e[0].isIntersecting; update(); }).observe(document.getElementById('entry'));
+  }
+})();
+</script>
+</body>
+</html>
