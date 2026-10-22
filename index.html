@@ -368,7 +368,13 @@
   .entry-dresscode { max-width: 520px; margin: 24px auto 0; padding: 20px; background: #fff3e8; border: 2px solid var(--orange); border-radius: 16px; text-align: left; }
   .entry-dresscode h3 { margin: 0 0 8px; font-size: 19px; line-height: 1.6; color: var(--navy); }
   .entry-dresscode p { margin: 0; font-size: 14px; color: var(--ink); }
-  .hero-requirements { color: #ffe1c5; font-size: 14px; font-weight: 700; margin: 0 0 22px; }
+  .hero-requirements { max-width: 520px; margin: 0 0 26px; padding: 18px 20px; color: var(--navy); background: #fff5e9; border: 2px solid var(--orange); border-radius: 18px; box-shadow: 0 8px 24px rgba(0, 0, 0, .1); }
+  .hero-requirements h2 { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 0 0 8px; font-size: clamp(17px, 3.8vw, 21px); line-height: 1.5; font-weight: 900; letter-spacing: .04em; }
+  .hero-requirements h2 strong { padding: 2px 12px; background: var(--orange); border-radius: 999px; white-space: nowrap; }
+  .hero-requirements p { margin: 0; font-size: 13.5px; line-height: 1.8; }
+  .hero-requirements .bring-id { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; border-top: 1px solid #e9d7c3; margin-top: 12px; padding-top: 10px; font-size: 14px; font-weight: 700; }
+  .bring-id span { background: #eee5f5; border-radius: 999px; padding: 1px 10px; font-size: 12px; }
+  @media (max-width: 599px) { .hero-requirements { padding: 16px; } }
   .btn-line { background: #fff; color: var(--navy); border: 2px solid var(--navy); box-shadow: 0 4px 0 var(--navy); min-height: 52px; font-size: 15px; }
   .btn-line:hover { box-shadow: 0 2px 0 var(--navy); }
   .contact { margin-top: 18px; font-size: 13px; color: var(--muted); word-break: break-all; }
@@ -573,7 +579,11 @@
               <span>参加無料・申込不要</span>
             </li>
           </ul>
-          <p class="hero-requirements fv" style="--d:1900ms">仮装必須 ／ 学生証をご持参ください</p>
+          <div class="hero-requirements fv" style="--d:1900ms" aria-labelledby="hero-dresscode-title">
+            <h2 id="hero-dresscode-title">ドレスコード：<strong>仮装必須</strong></h2>
+            <p>帽子やマントなど、小物を使った仮装でも参加できます。</p>
+            <p class="bring-id"><span>持ち物</span>学生証を忘れずにお持ちください</p>
+          </div>
           <a class="btn fv" style="--d:2000ms" href="#entry" id="hero-cta"><svg class="pk" aria-hidden="true" style="color:#2b2453"><use href="#i-pk"/></svg>参加方法はこちら<svg class="arr" aria-hidden="true"><use href="#i-arr"/></svg></a>
         </div>
         <div class="hero-art" id="hero-art" aria-hidden="true">
