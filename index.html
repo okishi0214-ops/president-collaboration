@@ -365,6 +365,10 @@
   .entry-list { list-style: none; padding: 0; margin: 26px auto 32px; max-width: 520px; text-align: left; }
   .entry-list li { display: grid; grid-template-columns: 96px 1fr; gap: 14px; align-items: center; padding: 11px 0; border-bottom: 1px dashed var(--line); }
   .entry-list li span:first-child { background: var(--lav); color: var(--navy-2); border-radius: 999px; text-align: center; font-size: 13px; font-weight: 700; }
+  .entry-dresscode { max-width: 520px; margin: 24px auto 0; padding: 20px; background: #fff3e8; border: 2px solid var(--orange); border-radius: 16px; text-align: left; }
+  .entry-dresscode h3 { margin: 0 0 8px; font-size: 19px; line-height: 1.6; color: var(--navy); }
+  .entry-dresscode p { margin: 0; font-size: 14px; color: var(--ink); }
+  .hero-requirements { color: #ffe1c5; font-size: 14px; font-weight: 700; margin: 0 0 22px; }
   .btn-line { background: #fff; color: var(--navy); border: 2px solid var(--navy); box-shadow: 0 4px 0 var(--navy); min-height: 52px; font-size: 15px; }
   .btn-line:hover { box-shadow: 0 2px 0 var(--navy); }
   .contact { margin-top: 18px; font-size: 13px; color: var(--muted); word-break: break-all; }
@@ -569,6 +573,7 @@
               <span>参加無料・申込不要</span>
             </li>
           </ul>
+          <p class="hero-requirements fv" style="--d:1900ms">仮装必須 ／ 学生証をご持参ください</p>
           <a class="btn fv" style="--d:2000ms" href="#entry" id="hero-cta"><svg class="pk" aria-hidden="true" style="color:#2b2453"><use href="#i-pk"/></svg>参加方法はこちら<svg class="arr" aria-hidden="true"><use href="#i-arr"/></svg></a>
         </div>
         <div class="hero-art" id="hero-art" aria-hidden="true">
@@ -649,7 +654,8 @@
             <div><dt>会場</dt><dd>KIBINOVE 1階</dd></div>
             <div><dt>対象</dt><dd>どなたでも参加できます<br><small>主に岡山大学の学生を想定しています</small></dd></div>
             <div><dt>参加費</dt><dd>無料（申込不要）</dd></div>
-            <div><dt>服装</dt><dd>ドレスコード「ハロウィン」<br><small>帽子やマントなど、小物だけでも歓迎</small></dd></div>
+            <div><dt>服装</dt><dd><strong>仮装必須</strong>（ドレスコード：ハロウィン）<br><small>帽子やマントなど、小物を使った仮装でも参加できます</small></dd></div>
+            <div><dt>持ち物</dt><dd>学生証</dd></div>
             <div><dt>主催</dt><dd>桃下村塾／岡山大学スタートアップ・ベンチャー創出本部</dd></div>
             <div><dt>共催</dt><dd>RAC、DS部、JumpingCats、WIZARDS、ウエイトリフティング部、大学祭実行委員会、Hello AI、NaxProject、Uni-kosen</dd></div>
           </dl>
@@ -713,8 +719,8 @@
           <div class="hw-row">
             <article class="hw box">
               <div class="ic"><svg viewBox="0 0 42 42"><path d="M8 32L22 4l2 9 9 19z" fill="#3b3159"/><ellipse cx="21" cy="33" rx="19" ry="5" fill="#3b3159"/><rect x="12" y="25" width="19" height="4" fill="#8a6cd0"/></svg></div>
-              <h3>ドレスコード<br>「ハロウィン」</h3>
-              <p>仮装でご来場。帽子やマントなど、小物だけでも歓迎。</p>
+              <h3>ドレスコード<br>仮装必須</h3>
+              <p>参加にはハロウィンの仮装が必須です。帽子やマントなど、小物を使った仮装でも参加できます。</p>
             </article>
             <article class="hw box">
               <div class="ic"><svg aria-hidden="true"><use href="#c-pk"/></svg></div>
@@ -788,10 +794,16 @@
       <div class="panel entry box">
         <p class="big">申込<em>不要</em>。<br>当日、会場へ。</p>
         <p>事前の申し込みはいりません。当日、KIBINOVE 1階へ直接お越しください。</p>
+        <div class="entry-dresscode">
+          <h3>ドレスコード：仮装必須</h3>
+          <p>参加にはハロウィンの仮装が必要です。帽子やマントなど、小物を使った仮装でも参加できます。<br><strong>当日は学生証も忘れずにお持ちください。</strong></p>
+        </div>
         <ul class="entry-list">
           <li><span>申込</span><span>不要（当日参加OK）</span></li>
           <li><span>参加費</span><span>無料</span></li>
           <li><span>対象</span><span>どなたでも（主に岡山大学の学生）</span></li>
+          <li><span>参加条件</span><span><strong>仮装必須</strong>（ハロウィン）</span></li>
+          <li><span>持ち物</span><span><strong>学生証</strong></span></li>
           <li><span>途中参加</span><span>途中参加・途中退出OK</span></li>
         </ul>
         <a class="btn btn-line" href="mailto:pgjy1ruf@s.okayama-u.ac.jp?subject=%E3%80%90HALLOWEEN%20PARTY%E3%80%91%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B">メールで問い合わせる<svg class="arr" aria-hidden="true"><use href="#i-arr"/></svg></a>
@@ -815,7 +827,11 @@
         </details>
         <details class="reveal">
           <summary>仮装は必須ですか？</summary>
-          <div class="a">ドレスコードは「ハロウィン」ですが、帽子やマントなど小物だけでの参加も歓迎です。気軽にお越しください。</div>
+          <div class="a">はい、参加にはハロウィンの仮装が必須です。帽子やマントなど、小物を使った仮装でも参加できます。</div>
+        </details>
+        <details class="reveal">
+          <summary>持ち物はありますか？</summary>
+          <div class="a">学生証をご持参ください。仮装の準備も忘れずにお願いします。</div>
         </details>
         <details class="reveal">
           <summary>参加費はかかりますか？</summary>
