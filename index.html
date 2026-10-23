@@ -235,11 +235,11 @@
   @media (min-width: 960px) { .hero-art .pile { width: 112%; max-width: none; right: -44px; bottom: -84px; } }
   main { overflow-x: clip; }
   .hero-art .gakucho {
-    position: absolute; z-index: 7; left: 50%; bottom: 0; height: 62%; width: auto; max-width: none;
+    position: absolute; z-index: 7; left: 50%; bottom: 0; height: 76%; width: auto; max-width: none;
     transform: translateX(-50%);
     filter: drop-shadow(0 14px 24px rgba(0, 0, 0, .35));
   }
-  @media (min-width: 960px) { .hero-art .gakucho { left: 16%; height: 50%; bottom: 40px; } }
+  @media (min-width: 960px) { .hero-art .gakucho { left: 16%; height: 64%; bottom: 40px; } }
   .hero-art .gakucho.float { animation: float 4s ease-in-out infinite alternate; }
   @keyframes float { from { transform: translateX(-50%) translateY(0); } to { transform: translateX(-50%) translateY(-10px); } }
   .hero-art .sign { position: absolute; right: 6%; top: 12%; z-index: 4; color: #fff; font-size: clamp(26px, 6vw, 40px); transform: rotate(10deg); text-align: center; line-height: .9; text-shadow: 0 3px 0 rgba(0, 0, 0, .25); }
@@ -270,6 +270,7 @@
   .polaroids { position: relative; height: 250px; max-width: 380px; width: 100%; margin: 0 auto; }
   .pol { position: absolute; width: 52%; background: #fff; padding: 9px 9px 30px; box-shadow: 0 10px 24px rgba(43, 36, 83, .18); }
   .pol img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+  .pol img.president-portrait { object-fit: contain; background: #fff; }
   .pol.p1 { left: 0; top: 24px; transform: rotate(-7deg); }
   .pol.p2 { right: 0; top: 0; transform: rotate(6deg); }
   .polaroids .script { position: absolute; right: -6px; bottom: -14px; font-size: 26px; text-align: center; transform: rotate(-10deg); }
@@ -516,17 +517,17 @@
 
 <!-- オープニング演出（クリックでスキップ） -->
 <div class="intro" id="intro" aria-hidden="true">
-  <img class="p p1" src="images/gakucho-1.png" alt="">
-  <img class="p p2" src="images/gakucho-3.png" alt="">
-  <img class="p p3" src="images/gakucho-4.png" alt="">
-  <img class="p p4" src="images/gakucho-2.png" alt="">
-  <img class="p p5" src="images/gakucho-5.png" alt="">
+  <img class="p p1" src="images/president-salute.png" alt="">
+  <img class="p p2" src="images/president-smiling.png" alt="">
+  <img class="p p3" src="images/president-nodding.png" alt="">
+  <img class="p p4" src="images/president-idea.png" alt="">
+  <img class="p p5" src="images/president-thinking.png" alt="">
 </div>
 
 <header class="header">
   <div class="wrap">
     <a class="logo" href="#top" aria-label="岡山大学公式イベント トップへ">
-      <img class="logo-fig" src="images/gakucho-1.png" alt="">
+      <img class="logo-fig" src="images/president-salute.png" alt="">
       <span class="logo-text">
         <b><span>岡山大学</span><span>公式イベント</span></b>
         <svg viewBox="0 0 150 10" aria-hidden="true" fill="none" stroke="#d9cfff" stroke-width="1">
@@ -588,7 +589,7 @@
         </div>
         <div class="hero-art" id="hero-art" aria-hidden="true">
           <img class="pile art-in" style="--d:300ms" src="images/sweets/sweets-hero-pile.png" alt="">
-          <img class="gakucho art-in" style="--d:800ms" src="images/gakucho-5.png" alt="">
+          <img class="gakucho art-in" style="--d:800ms" src="images/president-thinking.png" alt="">
         </div>
       </div>
     </div>
@@ -610,7 +611,7 @@
         </div>
         <div class="polaroids reveal">
           <figure class="pol p1" style="margin:0"><img src="images/polaroid-house.png" alt="満月の夜の洋館とジャック・オー・ランタンのイラスト"></figure>
-          <figure class="pol p2" style="margin:0"><img src="images/polaroid-gakucho.webp" alt="ヴァンパイア姿の那須学長のイラスト"></figure>
+          <figure class="pol p2" style="margin:0"><img class="president-portrait" src="images/president-waving.jpg" alt="手を振る那須学長のイラスト"></figure>
           <span class="script">Trick or<br>Treat!</span>
         </div>
       </div>
@@ -738,9 +739,9 @@
               <p>KIBINOVE 1階に、かぼちゃ・クモの巣・照明などを設置。</p>
             </article>
             <article class="hw box">
-              <div class="ic"><img src="images/gakucho-4.png" alt=""></div>
+              <div class="ic"><img src="images/president-nodding.png" alt=""></div>
               <h3>学長キャラクター</h3>
-              <p>ヴァンパイア姿の那須学長のイラストが、チラシや告知に登場。</p>
+              <p>那須学長のイラストが、チラシや告知に登場。</p>
             </article>
           </div>
         </div>
@@ -882,7 +883,7 @@
   <footer>
     <div class="wrap">
       <a class="logo" href="#top" aria-label="桃下村塾 トップへ">
-        <img class="logo-fig" src="images/gakucho-1.png" alt="">
+        <img class="logo-fig" src="images/president-salute.png" alt="">
         <span class="logo-text">
           <b>桃下村塾</b>
           <svg viewBox="0 0 150 10" aria-hidden="true" fill="none" stroke="#d9cfff" stroke-width="1">
