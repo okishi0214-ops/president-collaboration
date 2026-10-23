@@ -448,23 +448,20 @@
   .ld-text { margin: 16px 0 0; font-family: "Fredoka", sans-serif; font-weight: 700; font-size: clamp(20px, 4vmin, 28px); letter-spacing: .22em; text-shadow: 0 3px 0 rgba(0, 0, 0, .35); }
   .ld-text span { display: inline-block; animation: ld-hop 1.2s ease-in-out infinite; animation-delay: calc(var(--i) * 90ms); }
   @keyframes ld-hop { 0%, 60%, 100% { transform: none; } 30% { transform: translateY(-8px); } }
-  /* 歩く学長と足あとの点線 */
-  .walk { position: absolute; z-index: 3; left: 0; right: 0; bottom: 5vh; height: 34vh; pointer-events: none; }
-  /* 足もとのクリーム色の波（LPのファーストビュー下端と同じ形）とお菓子 */
-  .intro-ground { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; height: 13vh; pointer-events: none; }
-  .intro-ground svg { position: absolute; left: 0; top: -40px; width: 100%; height: calc(100% + 40px); }
-  .intro-ground img { position: absolute; bottom: 4vh; height: auto; max-width: none; filter: drop-shadow(0 6px 8px rgba(43, 36, 83, .25)); }
+  /* 歩く学長と、通ったあとに残る足あと */
+  .walk { position: absolute; z-index: 3; left: 0; right: 0; bottom: 9vh; height: 34vh; pointer-events: none; }
   .intro .confetti { z-index: 1; }
-  @media (max-width: 599px) { .intro-ground img:nth-of-type(2), .intro-ground img:nth-of-type(4) { display: none; } .intro-ground img { bottom: 2vh; } }
-  .trail {
-    position: absolute; left: 0; bottom: 0; height: 18px; width: var(--p, 0%);
-    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 18'><rect x='2' y='3' width='38' height='12' rx='6' fill='%23b9a9dc'/></svg>") 0 0 / 64px 18px repeat-x;
+  .prints { position: absolute; left: 0; right: 0; bottom: -6px; height: 34px; }
+  .fp {
+    position: absolute; bottom: var(--y); width: 26px; height: 14px; opacity: 0;
+    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 20'><ellipse cx='25' cy='10' rx='13' ry='7.5' fill='white'/><ellipse cx='7.5' cy='10' rx='6' ry='5.5' fill='white'/></svg>") center / contain no-repeat;
+    transform: scale(.3); transition: opacity .35s ease, transform .35s cubic-bezier(.2, 1.4, .4, 1);
   }
+  .fp.on { opacity: .85; transform: scale(1); }
   /* 同じ画像を「体」「左足」「右足」に切り分け、足を交互に振って歩かせる */
   .walker { position: absolute; bottom: 10px; left: 0; height: 100%; aspect-ratio: 1; translate: var(--x, -30vw) 0; }
   .walker .bob { position: absolute; inset: 0; filter: drop-shadow(0 10px 10px rgba(0, 0, 0, .35)); animation: walk-bob .55s ease-in-out infinite alternate; }
-  /* 進行方向（右）を向かせる */
-  .walker .face { position: absolute; inset: 0; transform: scaleX(-1); }
+  .walker .face { position: absolute; inset: 0; }
   .walker img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; }
   .walker .body { z-index: 2; clip-path: inset(0 0 13% 0); }
   .walker .leg { z-index: 1; animation: leg-swing 1.1s ease-in-out infinite alternate; }
@@ -472,7 +469,7 @@
   .walker .leg-r { clip-path: inset(85.5% 33% 0 58.5%); transform-origin: 62.9% 86%; animation-direction: alternate-reverse; }
   @keyframes leg-swing { from { transform: rotate(18deg); } to { transform: rotate(-18deg); } }
   @keyframes walk-bob { from { transform: translateY(0) rotate(-1.5deg); } to { transform: translateY(-7px) rotate(1.5deg); } }
-  @media (max-width: 599px) { .walk { height: 26vh; bottom: 6vh; } .loader { top: 18vh; } }
+  @media (max-width: 599px) { .walk { height: 26vh; bottom: 10vh; } .loader { top: 18vh; } }
 
   /* ---------- 登場アニメーション ---------- */
   .ch { display: inline-block; opacity: 0; transform: translateY(.5em) scale(.8); }
@@ -550,15 +547,8 @@
     <p class="ld-text"><span style="--i:0">L</span><span style="--i:1">O</span><span style="--i:2">A</span><span style="--i:3">D</span><span style="--i:4">I</span><span style="--i:5">N</span><span style="--i:6">G</span></p>
   </div>
   <div class="confetti" id="intro-confetti"></div>
-  <div class="intro-ground">
-    <svg viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0 60C180 20 360 10 560 40S900 100 1100 70 1360 20 1440 30V110H0Z" fill="#fbf6ee"/></svg>
-    <img src="images/sweets/sweets-beans-b.png" alt="" style="left:6%;width:min(150px,30vw)">
-    <img src="images/sweets/sweets-pumpkin.png" alt="" style="left:30%;width:min(90px,18vw)">
-    <img src="images/sweets/sweets-wrap-orange.png" alt="" style="left:58%;width:min(110px,22vw)">
-    <img src="images/sweets/sweets-choco.png" alt="" style="right:6%;width:min(80px,16vw)">
-  </div>
   <div class="walk">
-    <div class="trail" id="ld-trail"></div>
+    <div class="prints" id="ld-prints"></div>
     <div class="walker" id="ld-walker">
       <div class="bob"><div class="face">
         <img class="leg leg-l" src="images/president-salute.png" alt="">
@@ -1123,8 +1113,18 @@
     window.addEventListener('load', function () { pageLoaded = true; });
     var pctEl = document.getElementById('ld-pct');
     var bar = document.getElementById('ld-bar');
-    var trail = document.getElementById('ld-trail');
+    var prints = document.getElementById('ld-prints');
     var walker = document.getElementById('ld-walker');
+    // 足あとを歩幅ごとに並べておき、学長が通り過ぎたものから順に表示する
+    var stride = Math.max(34, walker.offsetWidth * .2), steps = [];
+    for (var sx = stride * .5; sx < window.innerWidth; sx += stride) {
+      var fp = document.createElement('i');
+      fp.className = 'fp';
+      fp.style.left = sx + 'px';
+      fp.style.setProperty('--y', (steps.length % 2 ? 14 : 2) + 'px');
+      prints.appendChild(fp);
+      steps.push({ el: fp, x: sx });
+    }
     var t0 = performance.now();
     var tick = function (now) {
       if (!intro.isConnected) return;
@@ -1133,11 +1133,13 @@
       var pct = Math.round(p * 100);
       pctEl.textContent = pct;
       bar.style.strokeDashoffset = (327 * (1 - p)).toFixed(1);
-      // 学長は画面の左外から右外へ。足あとは学長の位置まで伸びる
+      // 学長は画面の左外から歩いてきて、100% でちょうど右端に着く
       var w = walker.offsetWidth, vw = window.innerWidth;
-      var x = -w + (vw + w * 2) * p;
+      var x = -w * .9 + vw * p;          // 画像の左右の余白を見込んで、絵の右端が画面の右端にそろうように
       walker.style.setProperty('--x', x + 'px');
-      trail.style.setProperty('--p', Math.max(0, x + w * .5) + 'px');
+      // かかと（体の真ん中より少し後ろ）を通り過ぎた足あとだけ出す
+      var heel = x + w * .4;
+      for (var k = 0; k < steps.length; k++) if (steps[k].x < heel) steps[k].el.classList.add('on');
       if (p < 1) requestAnimationFrame(tick);
       else setTimeout(closeIntro, 350);
     };
