@@ -16,7 +16,7 @@
 <meta name="theme-color" content="#2b2453">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cinzel:wght@700;900&family=Fredoka:wght@500;600;700&family=Klee+One:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Cinzel:wght@700;900&family=Fredoka:wght@500;600;700&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
 <style>
   :root {
     --navy: #2b2453;
@@ -43,7 +43,7 @@
       url("images/newspaper.webp") 0 0 / 720px auto repeat,
       var(--cream);
     color: var(--ink);
-    font-family: "Klee One", "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+    font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Yu Gothic", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.9;
@@ -176,7 +176,7 @@
   .hero h1 { position: relative; }
   .hero h1 .en-wrap { position: relative; display: block; margin: 18px 0 0; }
   /* タイトルロゴ（スライムの画像） */
-  .title-logo { display: block; width: min(100%, 580px); height: auto; margin-left: -2%; filter: drop-shadow(0 0 16px rgba(150, 255, 70, .32)) drop-shadow(0 12px 18px rgba(5, 2, 25, .5)); }
+  .title-logo { display: block; width: min(100%, 580px); height: auto; margin-left: -2%; filter: drop-shadow(0 0 18px rgba(255, 170, 70, .35)) drop-shadow(0 12px 18px rgba(5, 2, 25, .5)); }
   .hero h1 .en {
     position: relative; z-index: 1;
     display: inline-flex; flex-direction: column; align-items: center;
@@ -306,6 +306,14 @@
   .tl li { position: relative; display: grid; grid-template-columns: 80px 1fr; gap: 18px; padding: 10px 0; }
   .tl .time { position: relative; z-index: 1; align-self: start; margin-top: 2px; background: var(--navy-2); color: #fff; border-radius: 999px; text-align: center; font-family: "Fredoka", sans-serif; font-weight: 600; font-size: 15px; line-height: 32px; height: 32px; }
   .tl h3 { margin: 0; font-size: 16px; font-weight: 700; letter-spacing: .06em; }
+  .tl .time { transition: background .4s, box-shadow .4s, transform .4s, color .4s; }
+  .tl li.lit .time {
+    background: var(--orange); color: var(--navy); transform: scale(1.12);
+    box-shadow: 0 0 0 4px rgba(245, 137, 58, .25), 0 0 18px 4px rgba(245, 137, 58, .65);
+    animation: time-glow 1.6s ease-in-out infinite;
+  }
+  @keyframes time-glow { 50% { box-shadow: 0 0 0 7px rgba(245, 137, 58, .12), 0 0 28px 8px rgba(245, 137, 58, .8); } }
+  .tl li.lit h3 { color: var(--orange-d); }
   .tl p { margin: 0; color: var(--muted); font-size: 13.5px; line-height: 1.75; }
 
   /* Format */
@@ -500,7 +508,7 @@
     .ch, .reveal, .box, .hero .fv, .hero .art-in { opacity: 1; transform: none; animation: none !important; transition: none; }
     .hero h1 .ja.fv { transform: rotate(-5deg); }
     .hero h1 .en-wrap.fv { transform: none; }
-    .bob, .float, .confetti i, .hero h1 .en .ln, .o-pk .lit { animation: none !important; }
+    .bob, .float, .confetti i, .hero h1 .en .ln, .o-pk .lit, .tl li.lit .time { animation: none !important; }
     .sparks { display: none; }
     .confetti { display: none; }
     .tl::before { transform: none; transition: none; }
@@ -596,11 +604,11 @@
         <div class="hero-text">
           <h1 id="hero-title">
             <span class="ja fv" style="--d:100ms">那須学長と語る</span>
-            <span class="en-wrap fv" style="--d:350ms"><img class="title-logo" id="title-en" src="images/title-logo.png" alt="HALLOWEEN PARTY" width="802" height="307"></span>
+            <span class="en-wrap fv" style="--d:350ms"><img class="title-logo" id="title-en" src="images/title-logo.png" alt="HALLOWEEN PARTY" width="1160" height="434"></span>
             <span class="sparks" id="sparks" aria-hidden="true"></span>
           </h1>
-          <p class="catch split" style="--base:900ms">学生の悩みを、<br class="sp">解決策とセットで学長へ。</p>
-          <p class="lead fv" style="--d:1500ms">サークル・団体の代表が、<br>悩みと解決策を那須学長へ届ける夜。</p>
+          <p class="catch split" style="--base:900ms">学生の悩みを、<br class="sp">解決策とセットで学長へ！</p>
+          <p class="lead fv" style="--d:1500ms">サークル・団体の代表が、<br>悩みと解決策を那須学長へ届ける夜！</p>
           <ul class="info-row">
             <li class="fv" style="--d:1650ms">
               <svg viewBox="0 0 28 28" aria-hidden="true" fill="none" stroke="#f5893a" stroke-width="2"><rect x="3" y="5" width="22" height="20" rx="3"/><path d="M3 11h22M9 2v5M19 2v5"/><path d="M8 15.5h2M13 15.5h2M18 15.5h2M8 20h2M13 20h2" stroke-linecap="round"/></svg>
@@ -617,7 +625,7 @@
           </ul>
           <div class="hero-requirements fv" style="--d:1900ms" aria-labelledby="hero-dresscode-title">
             <h2 id="hero-dresscode-title">ドレスコード：<strong>仮装必須</strong></h2>
-            <p>帽子やマントなど、小物を使った仮装でも参加できます。</p>
+            <p>帽子やマントなど、小物だけの仮装でもOK！</p>
             <p class="bring-id"><span>持ち物</span>学生証を忘れずにお持ちください</p>
           </div>
           <a class="btn fv" style="--d:2000ms" href="#entry" id="hero-cta"><svg class="pk" aria-hidden="true" style="color:#2b2453"><use href="#i-pk"/></svg>参加方法はこちら<svg class="arr" aria-hidden="true"><use href="#i-arr"/></svg></a>
@@ -641,8 +649,8 @@
         </div>
         <div class="vline"></div>
         <div class="about-main">
-          <h3 class="split"><span class="u">学生の悩みを、</span><br><span class="u">解決策とセットで学長へ。</span></h3>
-          <p class="reveal">ハロウィンの夜に、サークル・団体の代表と那須学長が、肩の力を抜いて語り合う場をつくります。不満を伝えるだけで終わらせず、自分たちで考えた解決策と、大学に求める協力を添えて届けます。</p>
+          <h3 class="split"><span class="u">学生の悩みを、</span><br><span class="u">解決策とセットで学長へ！</span></h3>
+          <p class="reveal">ハロウィンの夜に、サークル・団体の代表と那須学長が、肩の力を抜いて語り合う場！不満で終わらせず、自分たちで考えた解決策と大学に求める協力をセットで届けよう！</p>
         </div>
         <div class="polaroids reveal">
           <figure class="pol p1" style="margin:0"><img src="images/polaroid-house.png" alt="満月の夜の洋館とジャック・オー・ランタンのイラスト"></figure>
@@ -666,19 +674,19 @@
           <div class="ic"><svg viewBox="0 0 44 44" fill="none" stroke="#3b3159" stroke-width="2" stroke-linejoin="round"><path d="M22 6C12 6 4 12.5 4 20.5c0 4.5 2.5 8.5 6.4 11.2L8.5 39l8.8-4.5c1.5.3 3.1.5 4.7.5 10 0 18-6.5 18-14.5S32 6 22 6z"/><circle cx="14.5" cy="20.5" r="1.8" fill="#3b3159"/><circle cx="22" cy="20.5" r="1.8" fill="#3b3159"/><circle cx="29.5" cy="20.5" r="1.8" fill="#3b3159"/></svg></div>
           <div class="num">01</div>
           <h3>現場の声を直接届ける</h3>
-          <p>サークル・団体が日頃感じている悩みを、学長へ直接伝える機会をつくる。</p>
+          <p>サークル・団体が日頃感じている悩みを、学長へ直接伝える機会！</p>
         </article>
         <article class="aim box">
           <div class="ic"><svg viewBox="0 0 44 44" fill="none" stroke="#3b3159" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 8a11 11 0 0 0-6.4 20c1.1.8 1.7 2 1.7 3.4V33h9.4v-1.6c0-1.4.6-2.6 1.7-3.4A11 11 0 0 0 22 8z"/><path d="M17.5 37h9M19 41h6M22 2v2.5M9 7l1.8 1.8M35 7l-1.8 1.8M4 19h2.5M37.5 19H40"/></svg></div>
           <div class="num">02</div>
           <h3>解決策とセットで提案</h3>
-          <p>不満で終わらせず、自分たちで考えた解決策を添えて提案する。</p>
+          <p>不満で終わらせない！自分たちで考えた解決策を添えて提案！</p>
         </article>
         <article class="aim box">
           <div class="ic"><svg viewBox="0 0 44 44" fill="none" stroke="#3b3159" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="22" cy="14" r="5.5"/><path d="M12 34c0-6 4.5-10 10-10s10 4 10 10z"/><circle cx="10" cy="18" r="4"/><path d="M3 32c0-4 2.6-7 6.5-7 1.4 0 2.6.3 3.6.9"/><circle cx="34" cy="18" r="4"/><path d="M41 32c0-4-2.6-7-6.5-7-1.4 0-2.6.3-3.6.9"/></svg></div>
           <div class="num">03</div>
           <h3>ハロウィンで距離を縮める</h3>
-          <p>仮装で集まる非日常の場で、学長と学生の距離を縮める。</p>
+          <p>仮装で集まる非日常の場で、学長と学生の距離がぐっと近づく！</p>
         </article>
       </div>
     </div>
@@ -712,12 +720,12 @@
             <h2><span class="split">当日の流れ</span><span class="note reveal">※時間配分は予定です</span></h2>
           </div>
           <ol class="panel tl box">
-            <li class="reveal"><div class="time">18:30</div><div><h3>開場・受付</h3><p>仮装でご来場ください。受付を済ませて着席。</p></div></li>
-            <li class="reveal"><div class="time">18:45</div><div><h3>開演</h3><p>ハロウィンイベントがスタート。</p></div></li>
-            <li class="reveal"><div class="time">18:50</div><div><h3>学長挨拶</h3><p>那須学長から、開会のご挨拶。</p></div></li>
-            <li class="reveal"><div class="time">19:15</div><div><h3>悩みと解決策の発表</h3><p>各団体の代表が順に発表します。</p></div></li>
-            <li class="reveal"><div class="time">20:15</div><div><h3>交流</h3><p>学長を囲んでの交流タイム。</p></div></li>
-            <li class="reveal"><div class="time">21:00</div><div><h3>閉会・解散</h3><p>途中参加・途中退出も自由です。</p></div></li>
+            <li class="reveal"><div class="time">18:30</div><div><h3>開場・受付</h3><p>仮装でご来場！受付を済ませて着席！</p></div></li>
+            <li class="reveal"><div class="time">18:45</div><div><h3>開演</h3><p>ハロウィンイベント、スタート！</p></div></li>
+            <li class="reveal"><div class="time">18:50</div><div><h3>学長挨拶</h3><p>那須学長から開会のご挨拶！</p></div></li>
+            <li class="reveal"><div class="time">19:15</div><div><h3>悩みと解決策の発表</h3><p>各団体の代表が順番に発表！</p></div></li>
+            <li class="reveal"><div class="time">20:15</div><div><h3>交流</h3><p>学長を囲んで交流タイム！</p></div></li>
+            <li class="reveal"><div class="time">21:00</div><div><h3>閉会・解散</h3><p>途中参加・途中退出もOK！</p></div></li>
           </ol>
           <nav class="people-links" aria-label="イベントに関わる人たち">
             <a href="groups/">発表団体の紹介を見る →</a>
@@ -741,15 +749,15 @@
           <div class="steps">
             <article class="step box">
               <div class="top"><svg viewBox="0 0 30 30"><path d="M15 3C8.4 3 3 7.4 3 12.8c0 3 1.7 5.7 4.3 7.5L6 25l5.9-3c1 .2 2 .3 3.1.3 6.6 0 12-4.4 12-9.8S21.6 3 15 3z" fill="#f5893a"/><circle cx="10" cy="13" r="1.4" fill="#fff"/><circle cx="15" cy="13" r="1.4" fill="#fff"/><circle cx="20" cy="13" r="1.4" fill="#fff"/></svg><div><div class="label">STEP 1</div><h3>悩み</h3></div></div>
-              <p>いま困っていることを、具体的な場面とあわせて伝える。</p>
+              <p>いま困っていることを、具体的な場面とあわせて！</p>
             </article>
             <article class="step box">
               <div class="top"><svg viewBox="0 0 30 30" fill="none" stroke="#f5893a" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 4a8 8 0 0 0-4.7 14.5c.8.6 1.2 1.4 1.2 2.4V22h7v-1.1c0-1 .4-1.8 1.2-2.4A8 8 0 0 0 15 4z"/><path d="M12 25.5h6"/></svg><div><div class="label">STEP 2</div><h3>解決策</h3></div></div>
-              <p>自分たちで考えた案と、必要な協力を示す。</p>
+              <p>自分たちで考えた案と、必要な協力！</p>
             </article>
             <article class="step box">
               <div class="top"><svg viewBox="0 0 30 30"><circle cx="15" cy="10" r="5.5" fill="#f5893a"/><path d="M5 27c0-6 4.5-10 10-10s10 4 10 10z" fill="#f5893a"/></svg><div><div class="label">STEP 3</div><h3>学長へのお願い</h3></div></div>
-              <p>大学として後押しできることを、学長に相談する。</p>
+              <p>大学にしてほしい後押しを、学長に直接相談！</p>
             </article>
           </div>
           <div class="pills reveal">
@@ -766,17 +774,17 @@
             <article class="hw box">
               <div class="ic"><svg viewBox="0 0 42 42"><path d="M8 32L22 4l2 9 9 19z" fill="#3b3159"/><ellipse cx="21" cy="33" rx="19" ry="5" fill="#3b3159"/><rect x="12" y="25" width="19" height="4" fill="#8a6cd0"/></svg></div>
               <h3>ドレスコード<br>仮装必須</h3>
-              <p>参加にはハロウィンの仮装が必須です。帽子やマントなど、小物を使った仮装でも参加できます。</p>
+              <p>参加には仮装が必須！帽子やマントなど、小物だけの仮装でもOK！</p>
             </article>
             <article class="hw box">
               <div class="ic"><svg aria-hidden="true"><use href="#c-pk"/></svg></div>
               <h3>会場装飾</h3>
-              <p>KIBINOVE 1階に、かぼちゃ・クモの巣・照明などを設置。</p>
+              <p>KIBINOVE 1階が、かぼちゃ・クモの巣・照明でハロウィン仕様に！</p>
             </article>
             <article class="hw box">
               <div class="ic"><img src="images/president-nodding.png" alt=""></div>
               <h3>学長キャラクター</h3>
-              <p>那須学長のイラストが、チラシや告知に登場。</p>
+              <p>那須学長のイラストが、チラシや告知に登場！</p>
             </article>
           </div>
         </div>
@@ -789,18 +797,18 @@
     <div class="wrap">
       <div class="head">
         <span class="script reveal">Awards</span>
-        <h2 id="awards-title" class="split">仮装と提案に、ふたつの賞。</h2>
+        <h2 id="awards-title" class="split">仮装と提案に、ふたつの賞！</h2>
       </div>
       <div class="awards-grid">
         <article class="panel award box">
           <p class="award-label">BEST COSTUME</p>
           <h3>仮装大賞</h3>
-          <p>一番仮装が目立っていた方に贈る賞。とっておきの仮装で、ハロウィンの夜を盛り上げよう！</p>
+          <p>一番仮装が目立っていた方に贈る賞！とっておきの仮装で、ハロウィンの夜を盛り上げよう！</p>
         </article>
         <article class="panel award award-president box">
           <p class="award-label">PRESIDENT'S AWARD</p>
           <h3>学長賞</h3>
-          <p>一番提案にインパクトがあった方に贈る賞。あなたのアイデアを、学長へ届けよう！</p>
+          <p>一番提案にインパクトがあった方に贈る賞！あなたのアイデアを、学長へ届けよう！</p>
         </article>
       </div>
     </div>
@@ -816,8 +824,8 @@
       </div>
       <div class="panel rc box">
         <div>
-          <p class="big">発表のあとは、<br>学長を囲んで語り合う時間。</p>
-          <p>発表した団体も、聞きに来た人も、ここでは同じテーブル。発表の続きを話したり、気になった団体に声をかけたり、学長に直接質問したり。ハロウィンの夜を自由に楽しんでください。</p>
+          <p class="big">発表のあとは、<br>学長を囲んで語り合う時間！</p>
+          <p>発表した団体も、聞きに来た人も、ここでは同じテーブル！発表の続きを話したり、気になった団体に声をかけたり、学長に直接質問したり。ハロウィンの夜を自由に楽しもう！</p>
         </div>
         <div class="chips">
           <div class="chip box"><span class="k">TIME</span><span class="v">20:15–21:00<small>予定</small></span></div>
@@ -838,11 +846,11 @@
         <h2 class="split">参加方法</h2>
       </div>
       <div class="panel entry box">
-        <p class="big">申込<em>不要</em>。<br>当日、会場へ。</p>
-        <p>事前の申し込みはいりません。当日、KIBINOVE 1階へ直接お越しください。</p>
+        <p class="big">申込<em>不要</em>！<br>当日、会場へ！</p>
+        <p>事前の申し込みはいりません！当日、KIBINOVE 1階へ直接どうぞ！</p>
         <div class="entry-dresscode">
           <h3>ドレスコード：仮装必須</h3>
-          <p>参加にはハロウィンの仮装が必要です。帽子やマントなど、小物を使った仮装でも参加できます。<br><strong>当日は学生証も忘れずにお持ちください。</strong></p>
+          <p>参加には仮装が必要！帽子やマントなど、小物だけの仮装でもOK！<br><strong>当日は学生証を忘れずに！</strong></p>
         </div>
         <ul class="entry-list">
           <li><span>申込</span><span>不要（当日参加OK）</span></li>
@@ -869,31 +877,31 @@
       <div class="faq">
         <details class="reveal">
           <summary>申し込みは必要ですか？</summary>
-          <div class="a">不要です。当日、直接会場へお越しください。</div>
+          <div class="a">不要です！当日、直接会場へどうぞ！</div>
         </details>
         <details class="reveal">
           <summary>仮装は必須ですか？</summary>
-          <div class="a">はい、参加にはハロウィンの仮装が必須です。帽子やマントなど、小物を使った仮装でも参加できます。</div>
+          <div class="a">はい、仮装は必須です！帽子やマントなど、小物だけの仮装でもOK！</div>
         </details>
         <details class="reveal">
           <summary>持ち物はありますか？</summary>
-          <div class="a">学生証をご持参ください。仮装の準備も忘れずにお願いします。</div>
+          <div class="a">学生証を持ってきてください！仮装の準備もお忘れなく！</div>
         </details>
         <details class="reveal">
           <summary>参加費はかかりますか？</summary>
-          <div class="a">無料です。</div>
+          <div class="a">無料です！</div>
         </details>
         <details class="reveal">
           <summary>団体の代表者以外も参加できますか？</summary>
-          <div class="a">はい、どなたでも参加できます。主に岡山大学の学生を想定しています。</div>
+          <div class="a">はい、どなたでも参加OK！主に岡山大学の学生を想定しています。</div>
         </details>
         <details class="reveal">
           <summary>途中参加・途中退出はできますか？</summary>
-          <div class="a">できます。レセプションエリアでの交流タイムだけの参加も歓迎です。</div>
+          <div class="a">できます！交流タイムだけの参加も大歓迎！</div>
         </details>
         <details class="reveal">
           <summary>発表では何を話せばいいですか？資料は必要？</summary>
-          <div class="a">「悩み」「解決策」「学長へのお願い」の3ステップで、1団体4分程度（予定）でお話しいただきます。発表資料は不要です。詳しくは<a href="#format">発表の進め方</a>をご覧ください。</div>
+          <div class="a">「悩み」「解決策」「学長へのお願い」の3ステップで、1団体4分程度（予定）でお話しいただきます。発表資料はいりません！詳しくは<a href="#format">発表の進め方</a>をご覧ください。</div>
         </details>
       </div>
     </div>
@@ -1165,6 +1173,26 @@
       });
     }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
     targets.forEach(function (el) { if (!el.closest('.hero')) io.observe(el); });
+  }
+
+  // ---- タイムスケジュール：画面の真ん中にいちばん近い時間だけを光らせる ----
+  var tlItems = Array.prototype.slice.call(document.querySelectorAll('.tl li'));
+  var tlQueued = false;
+  var lightTime = function () {
+    tlQueued = false;
+    var mid = window.innerHeight / 2, best = null, bestD = Infinity;
+    tlItems.forEach(function (li) {
+      var r = li.getBoundingClientRect();
+      var d = Math.abs(r.top + r.height / 2 - mid);
+      if (r.bottom > 0 && r.top < window.innerHeight && d < bestD) { bestD = d; best = li; }
+    });
+    tlItems.forEach(function (li) { li.classList.toggle('lit', li === best && bestD < window.innerHeight * .35); });
+  };
+  var queueLight = function () { if (!tlQueued) { tlQueued = true; requestAnimationFrame(lightTime); } };
+  if (tlItems.length) {
+    window.addEventListener('scroll', queueLight, { passive: true });
+    window.addEventListener('resize', queueLight);
+    lightTime();
   }
 
   // ---- スマホ用固定CTA：ファーストビューのCTAが見えなくなったら表示、参加方法欄では隠す ----
