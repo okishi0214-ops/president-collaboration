@@ -426,7 +426,11 @@
   /* ---------- オープニング：学長が左から右へ歩く間にローディング表示 ---------- */
   .intro {
     position: fixed; inset: 0; z-index: 100; overflow: hidden; cursor: pointer;
-    background: #6a31a3;
+    /* ファーストビューと同じ紺の夜空にして、切り替わりをなじませる */
+    background:
+      radial-gradient(ellipse 60% 50% at 50% 30%, rgba(120, 90, 200, .38), transparent 70%),
+      radial-gradient(circle at 10% 10%, rgba(255, 255, 255, .06), transparent 30%),
+      var(--navy);
     transition: opacity .6s ease, visibility .6s;
   }
   .intro.done { opacity: 0; visibility: hidden; }
@@ -445,14 +449,22 @@
   .ld-text span { display: inline-block; animation: ld-hop 1.2s ease-in-out infinite; animation-delay: calc(var(--i) * 90ms); }
   @keyframes ld-hop { 0%, 60%, 100% { transform: none; } 30% { transform: translateY(-8px); } }
   /* 歩く学長と足あとの点線 */
-  .walk { position: absolute; z-index: 2; left: 0; right: 0; bottom: 10vh; height: 34vh; pointer-events: none; }
+  .walk { position: absolute; z-index: 3; left: 0; right: 0; bottom: 5vh; height: 34vh; pointer-events: none; }
+  /* 足もとのクリーム色の波（LPのファーストビュー下端と同じ形）とお菓子 */
+  .intro-ground { position: absolute; z-index: 2; left: 0; right: 0; bottom: 0; height: 13vh; pointer-events: none; }
+  .intro-ground svg { position: absolute; left: 0; top: -40px; width: 100%; height: calc(100% + 40px); }
+  .intro-ground img { position: absolute; bottom: 4vh; height: auto; max-width: none; filter: drop-shadow(0 6px 8px rgba(43, 36, 83, .25)); }
+  .intro .confetti { z-index: 1; }
+  @media (max-width: 599px) { .intro-ground img:nth-of-type(2), .intro-ground img:nth-of-type(4) { display: none; } .intro-ground img { bottom: 2vh; } }
   .trail {
     position: absolute; left: 0; bottom: 0; height: 18px; width: var(--p, 0%);
-    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 18'><rect x='2' y='3' width='38' height='12' rx='6' fill='white'/></svg>") 0 0 / 64px 18px repeat-x;
+    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 18'><rect x='2' y='3' width='38' height='12' rx='6' fill='%23b9a9dc'/></svg>") 0 0 / 64px 18px repeat-x;
   }
   /* 同じ画像を「体」「左足」「右足」に切り分け、足を交互に振って歩かせる */
   .walker { position: absolute; bottom: 10px; left: 0; height: 100%; aspect-ratio: 1; translate: var(--x, -30vw) 0; }
   .walker .bob { position: absolute; inset: 0; filter: drop-shadow(0 10px 10px rgba(0, 0, 0, .35)); animation: walk-bob .55s ease-in-out infinite alternate; }
+  /* 進行方向（右）を向かせる */
+  .walker .face { position: absolute; inset: 0; transform: scaleX(-1); }
   .walker img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; }
   .walker .body { z-index: 2; clip-path: inset(0 0 13% 0); }
   .walker .leg { z-index: 1; animation: leg-swing 1.1s ease-in-out infinite alternate; }
@@ -460,7 +472,7 @@
   .walker .leg-r { clip-path: inset(85.5% 33% 0 58.5%); transform-origin: 62.9% 86%; animation-direction: alternate-reverse; }
   @keyframes leg-swing { from { transform: rotate(18deg); } to { transform: rotate(-18deg); } }
   @keyframes walk-bob { from { transform: translateY(0) rotate(-1.5deg); } to { transform: translateY(-7px) rotate(1.5deg); } }
-  @media (max-width: 599px) { .walk { height: 26vh; bottom: 12vh; } .loader { top: 18vh; } }
+  @media (max-width: 599px) { .walk { height: 26vh; bottom: 6vh; } .loader { top: 18vh; } }
 
   /* ---------- 登場アニメーション ---------- */
   .ch { display: inline-block; opacity: 0; transform: translateY(.5em) scale(.8); }
@@ -537,14 +549,22 @@
     </div>
     <p class="ld-text"><span style="--i:0">L</span><span style="--i:1">O</span><span style="--i:2">A</span><span style="--i:3">D</span><span style="--i:4">I</span><span style="--i:5">N</span><span style="--i:6">G</span></p>
   </div>
+  <div class="confetti" id="intro-confetti"></div>
+  <div class="intro-ground">
+    <svg viewBox="0 0 1440 110" preserveAspectRatio="none"><path d="M0 60C180 20 360 10 560 40S900 100 1100 70 1360 20 1440 30V110H0Z" fill="#fbf6ee"/></svg>
+    <img src="images/sweets/sweets-beans-b.png" alt="" style="left:6%;width:min(150px,30vw)">
+    <img src="images/sweets/sweets-pumpkin.png" alt="" style="left:30%;width:min(90px,18vw)">
+    <img src="images/sweets/sweets-wrap-orange.png" alt="" style="left:58%;width:min(110px,22vw)">
+    <img src="images/sweets/sweets-choco.png" alt="" style="right:6%;width:min(80px,16vw)">
+  </div>
   <div class="walk">
     <div class="trail" id="ld-trail"></div>
     <div class="walker" id="ld-walker">
-      <div class="bob">
+      <div class="bob"><div class="face">
         <img class="leg leg-l" src="images/president-salute.png" alt="">
         <img class="leg leg-r" src="images/president-salute.png" alt="">
         <img class="body" src="images/president-salute.png" alt="">
-      </div>
+      </div></div>
     </div>
   </div>
 </div>
@@ -1025,12 +1045,11 @@
     if (l) place(sec, l);
   });
 
-  // ---- 紙吹雪（お菓子色）をファーストビュー全体に降らせる ----
-  if (!reduce) {
-    var cf = document.getElementById('confetti');
+  // ---- 紙吹雪（お菓子色）をファーストビュー全体とオープニングに降らせる ----
+  function rain(cf, h) {
+    if (!cf) return;
     var colors = [C.red, C.pink, C.yellow, C.green, C.purple, C.orange, C.blue];
     var count = window.innerWidth < 760 ? 26 : 54;
-    var h = document.querySelector('.hero').offsetHeight + 60;
     for (var k = 0; k < count; k++) {
       var i = document.createElement('i');
       var w = 6 + Math.random() * 8;
@@ -1046,6 +1065,10 @@
       i.style.setProperty('--spin', (Math.random() < .5 ? -1 : 1) * (360 + Math.random() * 540) + 'deg');
       cf.appendChild(i);
     }
+  }
+  if (!reduce) {
+    rain(document.getElementById('confetti'), document.querySelector('.hero').offsetHeight + 60);
+    rain(document.getElementById('intro-confetti'), window.innerHeight + 60);
   }
 
   // ---- タイトル周りのきらめき（星形と光の粒） ----
