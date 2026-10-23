@@ -423,36 +423,44 @@
   .sticky-cta .btn { width: 100%; min-height: 54px; }
   @media (min-width: 960px) { .sticky-cta { display: none; } }
 
-  /* ---------- オープニング：学長5人が画面いっぱいに飛び出す ---------- */
+  /* ---------- オープニング：学長が左から右へ歩く間にローディング表示 ---------- */
   .intro {
     position: fixed; inset: 0; z-index: 100; overflow: hidden; cursor: pointer;
-    background: radial-gradient(circle at 50% 50%, #4a3c8c, var(--navy) 70%);
+    background: #6a31a3;
+    transition: opacity .6s ease, visibility .6s;
   }
-  .intro .p {
-    position: absolute; left: var(--x); top: var(--y); width: var(--s); height: auto; max-width: none;
-    opacity: 0; transform: translate(-50%, -50%) scale(.1);
-    filter: drop-shadow(0 14px 30px rgba(0, 0, 0, .45));
+  .intro.done { opacity: 0; visibility: hidden; }
+  /* ローディング（画面中央の上あたり） */
+  .loader { position: absolute; z-index: 2; left: 50%; top: 16vh; translate: -50% 0; display: flex; flex-direction: column; align-items: center; color: #fff; }
+  .ld-ring { position: relative; width: clamp(120px, 22vmin, 170px); aspect-ratio: 1; }
+  .ld-ring svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .ld-ring .track { fill: rgba(20, 8, 40, .55); stroke: rgba(255, 255, 255, .18); stroke-width: 9; }
+  .ld-ring .bar { fill: none; stroke: #ff9a3c; stroke-width: 9; stroke-linecap: round; stroke-dasharray: 327; stroke-dashoffset: 327; transform: rotate(-90deg); transform-origin: 60px 60px; filter: drop-shadow(0 0 6px rgba(255, 154, 60, .8)); }
+  .ld-ring .spin { animation: ld-spin 1.1s linear infinite; transform-origin: 60px 60px; }
+  .ld-ring .spin circle { fill: none; stroke: #fff; stroke-width: 3; stroke-dasharray: 18 14; stroke-linecap: round; opacity: .85; }
+  @keyframes ld-spin { to { transform: rotate(360deg); } }
+  .ld-num { position: absolute; inset: 0; display: grid; place-items: center; font-family: "Fredoka", sans-serif; font-weight: 700; font-size: clamp(30px, 6vmin, 42px); line-height: 1; text-shadow: 0 3px 0 rgba(0, 0, 0, .3); }
+  .ld-num small { font-size: .5em; margin-left: 2px; }
+  .ld-text { margin: 16px 0 0; font-family: "Fredoka", sans-serif; font-weight: 700; font-size: clamp(20px, 4vmin, 28px); letter-spacing: .22em; text-shadow: 0 3px 0 rgba(0, 0, 0, .35); }
+  .ld-text span { display: inline-block; animation: ld-hop 1.2s ease-in-out infinite; animation-delay: calc(var(--i) * 90ms); }
+  @keyframes ld-hop { 0%, 60%, 100% { transform: none; } 30% { transform: translateY(-8px); } }
+  /* 歩く学長と足あとの点線 */
+  .walk { position: absolute; z-index: 2; left: 0; right: 0; bottom: 10vh; height: 34vh; pointer-events: none; }
+  .trail {
+    position: absolute; left: 0; bottom: 0; height: 18px; width: var(--p, 0%);
+    background: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 18'><rect x='2' y='3' width='38' height='12' rx='6' fill='white'/></svg>") 0 0 / 64px 18px repeat-x;
   }
-  .intro.go .p { animation: pop 2.5s forwards; animation-delay: var(--d); }
-  @keyframes pop {
-    0%   { opacity: 0; transform: translate(-50%, -50%) scale(.1) rotate(var(--r)); animation-timing-function: cubic-bezier(.2, 1.4, .4, 1); }
-    26%  { opacity: 1; transform: translate(-50%, -50%) scale(1.05) rotate(0deg); animation-timing-function: ease-in; }
-    100% { opacity: 1; transform: translate(-50%, -50%) scale(1.9) rotate(0deg); }
-  }
-  .intro.go { animation: intro-out .7s ease 1.95s forwards; }
-  @keyframes intro-out { to { opacity: 0; visibility: hidden; } }
-  .intro .p1 { --x: 15%; --y: 24%; --s: 58vmin; --r: -18deg; --d: 0s; }
-  .intro .p2 { --x: 85%; --y: 24%; --s: 58vmin; --r: 18deg;  --d: .08s; }
-  .intro .p3 { --x: 15%; --y: 80%; --s: 58vmin; --r: 14deg;  --d: .16s; }
-  .intro .p4 { --x: 85%; --y: 80%; --s: 58vmin; --r: -14deg; --d: .24s; }
-  .intro .p5 { --x: 50%; --y: 54%; --s: 88vmin; --r: -6deg;  --d: .38s; }
-  @media (orientation: portrait) {
-    .intro .p1 { --x: 20%; --y: 17%; --s: 66vw; }
-    .intro .p2 { --x: 80%; --y: 17%; --s: 66vw; }
-    .intro .p3 { --x: 20%; --y: 85%; --s: 66vw; }
-    .intro .p4 { --x: 80%; --y: 85%; --s: 66vw; }
-    .intro .p5 { --s: 104vw; }
-  }
+  /* 同じ画像を「体」「左足」「右足」に切り分け、足を交互に振って歩かせる */
+  .walker { position: absolute; bottom: 10px; left: 0; height: 100%; aspect-ratio: 1; translate: var(--x, -30vw) 0; }
+  .walker .bob { position: absolute; inset: 0; filter: drop-shadow(0 10px 10px rgba(0, 0, 0, .35)); animation: walk-bob .55s ease-in-out infinite alternate; }
+  .walker img { position: absolute; inset: 0; width: 100%; height: 100%; max-width: none; }
+  .walker .body { z-index: 2; clip-path: inset(0 0 13% 0); }
+  .walker .leg { z-index: 1; animation: leg-swing 1.1s ease-in-out infinite alternate; }
+  .walker .leg-l { clip-path: inset(85.5% 50% 0 41.5%); transform-origin: 45.6% 86%; }
+  .walker .leg-r { clip-path: inset(85.5% 33% 0 58.5%); transform-origin: 62.9% 86%; animation-direction: alternate-reverse; }
+  @keyframes leg-swing { from { transform: rotate(18deg); } to { transform: rotate(-18deg); } }
+  @keyframes walk-bob { from { transform: translateY(0) rotate(-1.5deg); } to { transform: translateY(-7px) rotate(1.5deg); } }
+  @media (max-width: 599px) { .walk { height: 26vh; bottom: 12vh; } .loader { top: 18vh; } }
 
   /* ---------- 登場アニメーション ---------- */
   .ch { display: inline-block; opacity: 0; transform: translateY(.5em) scale(.8); }
@@ -516,13 +524,29 @@
   </defs>
 </svg>
 
-<!-- オープニング演出（クリックでスキップ） -->
+<!-- オープニング演出：学長が歩いて読み込み完了（クリックでスキップ） -->
 <div class="intro" id="intro" aria-hidden="true">
-  <img class="p p1" src="images/president-salute.png" alt="">
-  <img class="p p2" src="images/president-smiling.png" alt="">
-  <img class="p p3" src="images/president-nodding.png" alt="">
-  <img class="p p4" src="images/president-idea.png" alt="">
-  <img class="p p5" src="images/president-thinking.png" alt="">
+  <div class="loader">
+    <div class="ld-ring">
+      <svg viewBox="0 0 120 120">
+        <circle class="track" cx="60" cy="60" r="52"/>
+        <circle class="bar" id="ld-bar" cx="60" cy="60" r="52"/>
+        <g class="spin"><circle cx="60" cy="60" r="40"/></g>
+      </svg>
+      <div class="ld-num"><span><span id="ld-pct">0</span><small>%</small></span></div>
+    </div>
+    <p class="ld-text"><span style="--i:0">L</span><span style="--i:1">O</span><span style="--i:2">A</span><span style="--i:3">D</span><span style="--i:4">I</span><span style="--i:5">N</span><span style="--i:6">G</span></p>
+  </div>
+  <div class="walk">
+    <div class="trail" id="ld-trail"></div>
+    <div class="walker" id="ld-walker">
+      <div class="bob">
+        <img class="leg leg-l" src="images/president-salute.png" alt="">
+        <img class="leg leg-r" src="images/president-salute.png" alt="">
+        <img class="body" src="images/president-salute.png" alt="">
+      </div>
+    </div>
+  </div>
 </div>
 
 <header class="header">
@@ -1050,27 +1074,52 @@
     }
   });
 
-  // ---- オープニング：学長5人が飛び出してフェードアウト → ファーストビュー開始 ----
+  // ---- オープニング：学長が左から右へ歩く間に 0→100% → フェードアウトしてファーストビュー開始 ----
   var hero = document.querySelector('.hero');
   var intro = document.getElementById('intro');
+  var heroStarted = false;
   var startHero = function () {
+    if (heroStarted) return;
+    heroStarted = true;
     hero.classList.add('in');
     var g = hero.querySelector('.gakucho');
     setTimeout(function () { g.classList.remove('art-in'); g.style.opacity = 1; g.classList.add('float'); }, 1600);
+  };
+  var closeIntro = function () {
+    if (!intro.isConnected) return;
+    intro.classList.add('done');
+    startHero();
+    setTimeout(function () { intro.remove(); }, 700);
   };
   if (reduce || !intro) {
     if (intro) intro.remove();
     startHero();
   } else {
-    var ready = Array.prototype.map.call(intro.querySelectorAll('img'), function (img) {
-      return img.decode ? img.decode().catch(function () {}) : Promise.resolve();
-    });
-    Promise.race([Promise.all(ready), new Promise(function (r) { setTimeout(r, 1500); })]).then(function () {
-      intro.classList.add('go');
-      setTimeout(startHero, 1950);
-    });
-    intro.addEventListener('animationend', function (e) { if (e.target === intro) intro.remove(); });
-    intro.addEventListener('click', function () { intro.remove(); startHero(); });
+    var DURATION = 6000;                 // 歩き終わるまでの最短時間（ゆっくり歩かせる）
+    var pageLoaded = document.readyState === 'complete';
+    window.addEventListener('load', function () { pageLoaded = true; });
+    var pctEl = document.getElementById('ld-pct');
+    var bar = document.getElementById('ld-bar');
+    var trail = document.getElementById('ld-trail');
+    var walker = document.getElementById('ld-walker');
+    var t0 = performance.now();
+    var tick = function (now) {
+      if (!intro.isConnected) return;
+      var p = Math.min(1, (now - t0) / DURATION);
+      if (p >= 1 && !pageLoaded) p = .99;  // 画像の読み込みが終わるまで 99% で待つ
+      var pct = Math.round(p * 100);
+      pctEl.textContent = pct;
+      bar.style.strokeDashoffset = (327 * (1 - p)).toFixed(1);
+      // 学長は画面の左外から右外へ。足あとは学長の位置まで伸びる
+      var w = walker.offsetWidth, vw = window.innerWidth;
+      var x = -w + (vw + w * 2) * p;
+      walker.style.setProperty('--x', x + 'px');
+      trail.style.setProperty('--p', Math.max(0, x + w * .5) + 'px');
+      if (p < 1) requestAnimationFrame(tick);
+      else setTimeout(closeIntro, 350);
+    };
+    requestAnimationFrame(tick);
+    intro.addEventListener('click', closeIntro);
   }
 
   // ---- スクロールで登場（同じ親の中では順番に） ----
