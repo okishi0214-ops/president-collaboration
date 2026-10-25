@@ -5,8 +5,9 @@
       "source": "/:path*",
       "has": [
         {
-          "type": "host",
-          "value": "president-collaboration.vercel.app"
+          "type": "header",
+          "key": "host",
+          "value": "president-collaboration\\.vercel\\.app"
         }
       ],
       "destination": "https://okayama-u-halloween.momoshita.jp/:path*",
