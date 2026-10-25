@@ -1,0 +1,53 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "president-collaboration.vercel.app"
+        }
+      ],
+      "destination": "https://okayama-u-halloween.momoshita.jp/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/groups/index.html",
+      "destination": "/groups/",
+      "permanent": true
+    },
+    {
+      "source": "/staff/index.html",
+      "destination": "/staff/",
+      "permanent": true
+    },
+    {
+      "source": "/groups",
+      "destination": "/groups/",
+      "permanent": true
+    },
+    {
+      "source": "/staff",
+      "destination": "/staff/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/images/:path*",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, stale-while-revalidate=604800"
+        }
+      ]
+    }
+  ],
+  "trailingSlash": true
+}

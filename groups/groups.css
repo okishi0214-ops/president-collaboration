@@ -5,3 +5,8 @@
 @media(prefers-reduced-motion:reduce){.group-card{transition:none}.group-card:hover{transform:none}}
 .section-nav{display:flex;align-items:center;justify-content:center;gap:12px;min-height:46px;border-top:1px solid #ffffff20;background:#ffffff0a}.section-nav a{display:inline-flex;gap:18px;align-items:center;padding:4px 18px;border-radius:999px;background:#ffffff14;color:white;text-decoration:none;font-size:13px;font-weight:700;white-space:nowrap}.section-nav a span{color:#ffc293}.section-nav a:hover{background:#f5893a38}.section-nav a[aria-current="page"]{background:var(--orange);color:var(--navy)}.section-nav a[aria-current="page"] span{color:var(--navy)}
 .staff-section{padding-bottom:80px}.staff-pending{text-align:center;max-width:760px;margin:0 auto;padding:40px 28px}.staff-pending>img{height:96px;width:auto;margin:0 auto 20px;transform:rotate(-7deg)}.staff-pending .eyebrow{margin-bottom:8px}.staff-pending h2{font-size:clamp(20px,4vw,28px)}.page-links{display:flex;justify-content:center;flex-wrap:wrap;gap:16px 32px;margin-top:32px;font-size:14px}.page-links a{text-underline-offset:6px}
+
+/* Keep the intrinsic image ratio and navigation touch targets. */
+.brand img{width:auto}
+.section-nav a{min-height:44px}
+@media(max-width:360px){.section-nav{gap:8px}.section-nav a{padding-left:12px;padding-right:12px;gap:10px}.header-inner{flex-wrap:wrap;padding-top:8px;padding-bottom:8px}}

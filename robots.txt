@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://okayama-u-halloween.momoshita.jp/sitemap.xml
