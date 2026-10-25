@@ -438,6 +438,14 @@
   .hero-requirements .bring-id { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; border-top: 1px solid #e9d7c3; margin-top: 12px; padding-top: 10px; font-size: 14px; font-weight: 700; }
   .bring-id span { background: #eee5f5; border-radius: 999px; padding: 1px 10px; font-size: 12px; }
   @media (max-width: 599px) { .hero-requirements { padding: 16px; } }
+  .hero-connect { position:relative; max-width:520px; margin:0 0 26px; padding:22px; border:1px solid #c8afff; border-radius:18px; background:linear-gradient(135deg,#f3eaff,#e7e0fb); color:var(--navy); box-shadow:0 8px 24px #110d2c24; }
+  .hero-connect-top { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:12px; }
+  .hero-connect-label { display:inline-block; padding:4px 12px; border-radius:999px; background:#fff8; color:#5b4188; font-size:11px; font-weight:900; letter-spacing:.06em; }
+  .hero-connect-icon { flex:none; width:44px; height:34px; color:#7a58a4; }
+  .hero-connect h2 { margin:0 0 12px; font-size:clamp(19px,3.9vw,25px); font-weight:900; line-height:1.65; letter-spacing:.02em; }
+  .hero-connect h2 strong { background:linear-gradient(transparent 66%,#ffc682 66%); box-decoration-break:clone; -webkit-box-decoration-break:clone; }
+  .hero-connect p { margin:0; font-size:14px; font-weight:700; line-height:1.95; color:#4b3c69; }
+  @media(max-width:599px){.hero-connect{padding:18px 16px}.hero-connect-label{font-size:10px;padding:4px 9px}.hero-connect-icon{width:36px}.hero-connect p{font-size:13px}}
   .btn-line { background: #fff; color: var(--navy); border: 2px solid var(--navy); box-shadow: 0 4px 0 var(--navy); min-height: 52px; font-size: 15px; }
   .btn-line:hover { box-shadow: 0 2px 0 var(--navy); }
   .contact { margin-top: 18px; font-size: 13px; color: var(--muted); word-break: break-all; }
@@ -688,7 +696,12 @@
             <p>帽子やマントなど、小物だけの仮装でもOK！<br>運営によるコスプレアイテムの貸し出しもあります（数に限りがあります）。</p>
             <p class="bring-id"><span>持ち物</span>学生証を忘れずにお持ちください</p>
           </div>
-          <a class="btn fv" style="--d:2000ms" href="#entry" id="hero-cta"><svg class="pk" aria-hidden="true" style="color:#2b2453"><use href="#i-pk"/></svg>参加方法はこちら<svg class="arr" aria-hidden="true"><use href="#i-arr"/></svg></a>
+          <aside class="hero-connect fv" id="hero-connect" style="--d:2000ms" aria-labelledby="hero-connect-title">
+            <div class="hero-connect-top"><span class="hero-connect-label">岡大公式 HALLOWEEN PARTY</span><svg class="hero-connect-icon" viewBox="0 0 48 36" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="16" cy="10" r="5"/><circle cx="34" cy="12" r="4"/><path d="M5 31v-3a11 11 0 0 1 22 0v3M29 22a9 9 0 0 1 14 7v2M27 4l2-3M40 4l3-2"/></svg></div>
+            <h2 id="hero-connect-title">学年も、学部も、サークルも。<br><strong>垣根を越えて、つながろう！</strong></h2>
+            <p>岡大公式のハロウィンパーティーで、<br>普段は関わる機会のない学生とも、気軽に交流しよう！</p>
+          </aside>
+          <a class="btn fv" style="--d:2100ms" href="#entry" id="hero-cta"><svg class="pk" aria-hidden="true" style="color:#2b2453"><use href="#i-pk"/></svg>参加方法はこちら<svg class="arr" aria-hidden="true"><use href="#i-arr"/></svg></a>
         </div>
         <div class="hero-art" id="hero-art" aria-hidden="true">
           <img class="pile art-in" style="--d:300ms" src="images/sweets/sweets-hero-pile.png" alt="" width="732" height="586">
